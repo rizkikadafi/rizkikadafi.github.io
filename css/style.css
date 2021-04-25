@@ -1,0 +1,21 @@
+.navbar-brand,
+.jumbotron h1 {
+  font-family: 'Original Surfer', cursive;
+}
+
+.jumbotron .lead {
+  font-family: 'Lora', serif;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #d3d2d2;
+}
+
+#projects {
+  background-color: #d3d2d2;
+}
+
+section {
+  padding-top: 5rem;
+}
