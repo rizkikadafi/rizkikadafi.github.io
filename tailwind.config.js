@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    '*.{md, markdown, html}',
-    './_posts/*.{md, markdown, html}',
-    './_layouts/**/*.{md, markdown, html}',
-    './_includes/**/*.{md, markdown, html}',
-    './_drafts/**/*.{md, markdown, html}',
+    './*.{html, md, markdown}',
+    './_posts/*.{html, md, markdown}',
+    './_layouts/**/*.{md, markdown}',
+    './_includes/**/*.{html, md, markdown}',
+    './_drafts/**/*.{html, md, markdown}',
   ],
   theme: {
     extend: {},
