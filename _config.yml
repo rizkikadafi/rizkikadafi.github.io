@@ -1,0 +1,12 @@
+exclude:
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - package.lock.json
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
