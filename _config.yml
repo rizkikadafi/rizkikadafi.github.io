@@ -1,5 +1,5 @@
-baseurl: /
-url: https://rizkikadafi.github.io/
+baseurl: '/'
+url: 'https://rizkikadafi.github.io'
 
 exclude:
   - package.json
