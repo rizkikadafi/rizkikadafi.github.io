@@ -9,4 +9,6 @@ plugins:
 
 postcss:
   cache: false
+  plugins:
+    - autoprefixer
 
