@@ -1,14 +1,38 @@
 ---
+layout: default
+title: Kadafi's Portfolio
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{'assets/css/main.css' | relative_url }}"">
-  <title>My Portfolio Website</title>
-</head>
-<body>
-  <h1 class="text-4xl text-blue-500 text-center">Hello World</h1>
-</body>
-</html>
+
+<div class="container">
+  <section id="hero" class="*:text-white h-72 sm:h-96 w-screen p-2">
+    <ul class="bg-slate-700 absolute p-3 left-0 h-screen top-0 z-10 w-52 invisible">
+      <li>Home</li>
+      <li>About</li>
+      <li>Technolgy</li>
+      <li>Blog</li>
+    </ul>
+    <div class="hero-image bg-hero2 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg">
+      <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-6">
+        <nav class="flex justify-between flex-grow-1">
+          <a href="" class="font-medium text-lg sm:text-xl">Rizki Kadafi</a>
+          <i class="bi bi-list sm:hidden"></i>
+          <ul class="hidden sm:flex">
+            <li>Home</li>
+            <li>About</li>
+            <li>Technolgy</li>
+            <li>Blog</li>
+          </ul>
+        </nav>
+        <div class="h-full flex flex-col justify-center">
+          <h1 class="font-bold text-3xl">🚀 Hi, I'm Muhamad Rizki</h1>
+          <p class="text-sm my-2 sm:my-4">
+            A tech and open-source 🌐 enthusiast!<br>
+            Let's team up and code 💻 for a better tomorrow!
+          </p>
+          <button type="button" class="bg-slate-500 hover:bg-slate-700 w-32 rounded-3xl py-2 text-sm">Contact
+            Me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
