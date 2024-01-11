@@ -1,3 +1,6 @@
+baseurl: /
+url: https://rizkikadafi.github.io/
+
 exclude:
   - package.json
   - postcss.config.js
