@@ -1,3 +1,9 @@
+postcss:
+  cache: false
+
+plugins:
+  - jekyll-postcss
+
 exclude:
   - package.json
   - postcss.config.js

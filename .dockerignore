@@ -1,0 +1,16 @@
+**/node_modules/
+**/dist
+.git
+.gitignore
+npm-debug.log
+.coverage
+.coverage.*
+.env
+.aws
+
+**/.bundle/
+**/.jekyll-cache/
+**/.sass-cache/
+.jekyll-metadata
+**/_site/
+**/vendor/
