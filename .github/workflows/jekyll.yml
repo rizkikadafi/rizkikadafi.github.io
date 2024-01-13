@@ -43,8 +43,10 @@ jobs:
           options: -v ${{ github.workspace }}:/app
           shell: bash
           run: |
-            npm ls
-            bundle show
+            npm -v
+            bundle -v
+            pwd
+            cat package-lock.json
       - name: verify site
         run: |
           ls -l _site
