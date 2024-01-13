@@ -43,7 +43,7 @@ jobs:
           options: -v ${{ github.workspace }}:/app
           shell: bash
           run: |
-            bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" 
+            bundle exec jekyll build 
       - name: verify site
         run: |
           ls -l _site
