@@ -38,9 +38,12 @@ jobs:
         with:
           image: rizkikadafi/jekyll-tailwind:latest
           options: -v ${{ github.workspace }}:/app
+          shell: bash
+          run: |
+            ls -l /app
       - name: verify site
         run: |
-          ls -l /app
+          ls -l _site
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
