@@ -46,6 +46,7 @@ jobs:
             npm -v
             bundle -v
             pwd
+            ls -l vendor
             bundle exec jekyll build
       - name: verify site
         run: |
