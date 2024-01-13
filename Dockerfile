@@ -44,6 +44,7 @@ COPY package*.json ./
 # Copy Gemfile
 COPY Gemfile ./
 
+USER root
 # set gems local directory
 RUN bundle config --local path 'vendor/bundle'
 
@@ -52,7 +53,7 @@ RUN npm install tailwindcss postcss autoprefixer
 
 # install Gemfile dependencies
 RUN bundle install
-
+USER app
 # Copy all files project
 COPY . .
 
