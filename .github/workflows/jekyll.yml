@@ -38,9 +38,14 @@ jobs:
         with:
           image: rizkikadafi/jekyll-tailwind:latest
           options: -v ${{ github.workspace }}:/app
+      - name: verify site
+        run: |
+          ls -l /app
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
   # Deployment job
   deploy:
     environment:
