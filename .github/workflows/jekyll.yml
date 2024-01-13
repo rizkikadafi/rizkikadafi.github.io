@@ -46,7 +46,7 @@ jobs:
             npm -v
             bundle -v
             pwd
-            cat package-lock.json
+            bundle exec jekyll build
       - name: verify site
         run: |
           ls -l _site
