@@ -43,11 +43,8 @@ jobs:
           options: -v ${{ github.workspace }}:/app
           shell: bash
           run: |
-            bundle config --local path 'vendor/bundle'
-            npm install tailwindcss postcss autoprefixer
-            bundle install
-            bundle exec jekyll build
-            ls -l vendor
+            npm ls
+            bundle show
       - name: verify site
         run: |
           ls -l _site
