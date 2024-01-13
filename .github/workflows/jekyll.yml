@@ -46,6 +46,7 @@ jobs:
             pwd
             which jekyll
             which bundle
+            ls -l vendor
       - name: verify site
         run: |
           ls -l _site
