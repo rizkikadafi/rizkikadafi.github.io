@@ -43,7 +43,9 @@ jobs:
           options: -v ${{ github.workspace }}:/app
           shell: bash
           run: |
-            bundle exec jekyll build 
+            pwd
+            which jekyll
+            which bundle
       - name: verify site
         run: |
           ls -l _site
