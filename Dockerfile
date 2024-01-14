@@ -37,7 +37,6 @@ RUN npm install tailwindcss postcss autoprefixer
 
 # install Gemfile dependencies
 RUN bundle install
-USER app
 # Copy all files project
 COPY . .
 
