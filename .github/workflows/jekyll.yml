@@ -47,7 +47,9 @@ jobs:
             bundle -v
             pwd
             ls -al
+            bundle config --local path 'vendor/bundle'
             bundle install
+            npm install tailwindcss postcss autoprefixer 
       - name: verify site
         run: |
           ls -al
