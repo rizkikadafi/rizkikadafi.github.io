@@ -46,11 +46,11 @@ jobs:
             npm -v
             bundle -v
             pwd
-            ls -l vendor
-            bundle exec jekyll build
+            ls -al
+            bundle install
       - name: verify site
         run: |
-          ls -l _site
+          ls -al
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   # Deployment job
