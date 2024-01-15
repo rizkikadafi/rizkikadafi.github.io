@@ -1,0 +1,12 @@
+- name: flutter
+  src: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg 
+  doc: https://flutter.dev/ 
+- name: flask
+  src: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg 
+  doc: https://flask.palletsprojects.com/en/3.0.x/ 
+- name: bootstrap
+  src: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg 
+  doc: https://getbootstrap.com/ 
+- name: tailwindcss
+  src: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg 
+  doc: https://tailwindcss.com/ 

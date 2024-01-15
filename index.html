@@ -2,35 +2,103 @@
 layout: default
 title: Kadafi's Portfolio
 ---
-
-<div class="container">
-  <section id="hero" class="*:text-white h-72 sm:h-96 lg:h-screen w-screen p-2">
+<div class="w-full pb-10">
+  <section id="hero" class="*:text-white h-72 sm:h-96 lg:h-screen p-3">
     <ul class="bg-slate-700 absolute p-3 left-0 h-screen top-0 z-10 w-52 invisible">
       <li>Home</li>
       <li>About</li>
       <li>Technolgy</li>
       <li>Blog</li>
     </ul>
-    <div class="hero-image bg-hero2 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg">
-      <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-6">
+    <div
+      class="hero-image bg-hero2 dark:bg-hero1 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom">
+      <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-6 lg:p-8">
         <nav class="flex justify-between flex-grow-1">
           <a href="" class="font-medium text-lg sm:text-xl">Rizki Kadafi</a>
-          <i class="bi bi-list sm:hidden"></i>
-          <ul class="hidden sm:flex">
+          <div class="*:cursor-pointer">
+            <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
+            <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
+            <i class="bi bi-list sm:hidden text-xl"></i>
+          </div>
+          <ul class="hidden sm:flex *:mx-5">
             <li>Home</li>
             <li>About</li>
             <li>Technolgy</li>
             <li>Blog</li>
           </ul>
         </nav>
-        <div class="h-full flex flex-col justify-center">
-          <h1 class="font-bold text-3xl">🚀🚀 Hi, I'm Muhamad Rizki</h1>
-          <p class="text-sm my-2 sm:my-4">
-            A tech and open-source 🌐 enthusiast!<br>
-            Let's team up and code 💻 for a better tomorrow!
-          </p>
-          <button type="button" class="bg-slate-500 hover:bg-slate-700 w-32 rounded-3xl py-2 text-sm">Contact
+        <div class="h-full flex flex-col justify-center items-center">
+          <h1 class="font-bold text-2xl lg:text-3xl">🚀 Hi, I'm Muhamad Rizki 🚀</h1>
+          <div class="text-xs lg:text-base text-center my-3 sm:my-4">
+            <p>
+              A tech and open-source 🌐 enthusiast!
+            </p>
+            <p>
+              Let's team up and code 💻 for a better tomorrow!
+            </p>
+          </div>
+
+          <button type="button"
+            class="bg-slate-500 hover:bg-slate-700 active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">Contact
             Me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="p-5">
+    <div class="mb-5 text-center dark:*:text-white">
+      <h2
+        class="text-2xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+        About Me
+      </h2>
+      <p class="text-xs">A short description about me</p>
+    </div>
+
+    <div class="flex flex-col">
+      <div class="bg-slate-800 dark:bg-slate-700 rounded-md w-1/2 mx-auto mb-5 shadow-custom">
+        <img src="/assets/image/profile.png" class="mx-auto border-r-indigo-100" alt="">
+      </div>
+      <div>
+        <p class="px-5 text-justify text-sm dark:text-white">
+          🎓 I am a Computer Science student at Jakarta State University (Universitas Negeri Jakarta). My journey in
+          technology has been an exciting exploration, one that continues to be driven by a desire to embrace innovation
+          and contribute to the ever-evolving world of open source.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="technology">
+    <div class="mb-5 text-center dark:*:text-white">
+      <h2
+        class="text-2xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+        Technolgy
+      </h2>
+      <p class="text-xs">The technology I use or that I am learning about</p>
+    </div>
+
+    <div class="px-3 mb-5 box-border">
+      <div class="bg-slate-800 dark:bg-slate-700 rounded-md shadow-custom p-3">
+        <h3 class="text-sm text-white text-center font-bold mb-3">Programming Languages</h3>
+        <div class="*:w-10 *:h-10 *:mx-1 flex flex-wrap justify-center">
+          {% for item in site.data.programming_languages %}
+          <a href="{{ item.doc }}">
+            <img src="{{ item.src }}" alt="{{ item.name }}">
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="px-3 box-border">
+      <div class="bg-slate-800 dark:bg-slate-700 rounded-md shadow-custom p-3">
+        <h3 class="text-sm text-white text-center font-bold mb-3">Frameworks and Libraries</h3>
+        <div class="*:w-10 *:h-10 *:mx-1 flex flex-wrap justify-center">
+          {% for item in site.data.frameworks_libraries %}
+          <a href="{{ item.doc }}">
+            <img src="{{ item.src }}" alt="{{ item.name }}">
+          </a>
+          {% endfor %}
         </div>
       </div>
     </div>

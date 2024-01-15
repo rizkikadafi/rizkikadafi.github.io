@@ -18,7 +18,7 @@ ENV GEM_HOME="/gems"
 ENV PATH="/gems/bin:$PATH"
 
 # Jekyll, Bundler install
-RUN gem install jekyll bundler jekyll-postcss
+RUN gem install bundler jekyll-postcss webrick
 
 # Project folder
 WORKDIR /app
@@ -30,13 +30,14 @@ COPY package*.json ./
 COPY Gemfile ./
 
 # set gems local directory
-# RUN bundle config --local path 'vendor/bundle'
+RUN bundle config --local path 'vendor/bundle'
+
+# install Gemfile dependencies
+RUN bundle install
 
 # npm dependencies install include tailwindcss
 RUN npm install tailwindcss postcss autoprefixer
 
-# install Gemfile dependencies
-RUN bundle install
 # Copy all files project
 COPY . .
 
