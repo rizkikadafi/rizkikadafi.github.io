@@ -8,9 +8,9 @@ npm-debug.log
 .env
 .aws
 
-**/.bundle/
-**/.jekyll-cache/
-**/.sass-cache/
+.bundle/
+.jekyll-cache/
+.sass-cache/
 .jekyll-metadata
-**/_site/
-**/vendor/
+_site/
+vendor/

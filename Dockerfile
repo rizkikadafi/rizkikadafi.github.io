@@ -30,7 +30,7 @@ COPY package*.json ./
 COPY Gemfile ./
 
 # set gems local directory
-RUN bundle config --local path 'vendor/bundle'
+# RUN bundle config --local path 'vendor/bundle'
 
 # npm dependencies install include tailwindcss
 RUN npm install tailwindcss postcss autoprefixer
