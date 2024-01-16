@@ -1,3 +1,5 @@
+baseurl: ""
+url: ""
 postcss:
   cache: false
 
