@@ -1,0 +1,9 @@
+- name: Home
+  link: "#hero"
+- name: About
+  link: "#about"
+- name: Technology
+  link: "#technology"
+- name: Blog
+  link: /blog.html
+

@@ -4,17 +4,13 @@ title: Kadafi's Portfolio
 permalink: /
 ---
 <div class="w-full *:pb-8">
+  {% include sticky-navbar.html %}
   <section id="hero" class="*:text-white h-72 sm:h-96 lg:h-screen p-3 dark:bg-radial-gradient-bottom-left">
-    <ul class="bg-slate-700 absolute p-3 left-0 h-screen top-0 z-10 w-52 invisible">
-      <li>Home</li>
-      <li>About</li>
-      <li>Technolgy</li>
-      <li>Blog</li>
-    </ul>
+    {% include modal-navigation.html %}
     <div
-      class="hero-image bg-hero2 dark:bg-hero1 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom">
+      class="hero-image bg-hero2 dark:bg-hero1 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom-lg dark:shadow-custom">
       <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-3 lg:p-8">
-        <nav class="flex justify-between flex-grow-1">
+        <nav id="default-nav" class="flex justify-between flex-grow-1">
           <a href="{{site.baseurl}}/" class="relative font-medium text-md sm:text-xl">Rizki Kadafi</a>
           <div class="flex">
             <ul class="hidden sm:flex *:mx-5">
@@ -26,7 +22,8 @@ permalink: /
             <div class="*:cursor-pointer">
               <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
               <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
-              <i class="bi bi-list sm:hidden text-xl"></i>
+              <i data-modal-target="top-right-modal" data-modal-toggle="top-right-modal"
+                class="bi bi-list sm:hidden text-xl"></i>
             </div>
           </div>
         </nav>
@@ -49,15 +46,15 @@ permalink: /
     </div>
   </section>
 
-  <section id="about" class="px-5 dark:bg-radial-gradient-diagonal">
+  <section id="about" class="px-5 dark:bg-radial-gradient-diagonal text-gray-800 dark:text-gray-200">
     {% include header-title.html title='About Me' subtitle='A short description about me' %}
 
     <div class="flex flex-col">
-      <div class="bg-slate-800 dark:bg-slate-700 rounded-md w-1/2 mx-auto mb-5 shadow-custom">
+      <div class="bg-slate-700 rounded-md w-1/2 mx-auto mb-5 shadow-custom-lg dark:shadow-custom">
         <img src="/assets/image/profile.png" class="mx-auto border-r-indigo-100" alt="">
       </div>
       <div>
-        <p class="px-5 text-justify text-sm dark:text-white">
+        <p class="px-5 text-justify text-sm">
           🎓 I am a Computer Science student at Jakarta State University (Universitas Negeri Jakarta). My journey in
           technology has been an exciting exploration, one that continues to be driven by a desire to embrace innovation
           and contribute to the ever-evolving world of open source.
@@ -67,26 +64,33 @@ permalink: /
   </section>
 
   <section id="technology" class="dark:bg-radial-gradient-diagonal-reverse">
-    {% include header-title.html title='Technolgy' subtitle='The technology I use or that I am learning about' %}
+    {% include header-title.html title='Technology' subtitle='The technology I use or that I am learning about' %}
     {% include tech_card.html data=site.data.programming_languages %}
     {% include tech_card.html data=site.data.frameworks_libraries %}
   </section>
 
   <section id="project" class="dark:bg-radial-gradient-diagonal">
     {% include header-title.html title='Projects' subtitle="Projects that I have worked on" %}
-    <div class="dark:text-white flex flex-grow-0">
-      <div>
-        <ul>
-          <li class="flex">
-            <h4>Project 1</h4>
-            <button type="button">
-              <i class="bi bi-arrow-right-circle"></i>
-
-            </button>
-          </li>
-        </ul>
+    <div class="dark:text-white flex flex-grow-0 relative">
+      <div
+        class="w-full h-full absolute flex justify-between items-center text-3xl px-4 text-gray-800 dark:text-gray-200">
+        <div class="group button-prev">
+          <i class="bi bi-caret-left group-active:hidden"></i>
+          <i class="bi bi-caret-left-fill hidden group-active:block"></i>
+        </div>
+        <div class="group button-next">
+          <i class="bi bi-caret-right group-active:hidden"></i>
+          <i class="bi bi-caret-right-fill hidden group-active:block"></i>
+        </div>
       </div>
-      <div>
+      <div class="swiper w-3/5">
+        <div class="swiper-wrapper">
+          {% for item in site.data.projects %}
+          {% include project_card.html name=item.name desc=item.desc img=item.img %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hidden">
 
       </div>
     </div>
@@ -96,7 +100,7 @@ permalink: /
     {% include header-title.html title='Contact Me' subtitle="Let's connect with me" %}
 
     <div class="px-3 mb-5 box-border text-white">
-      <div class="bg-slate-800 dark:bg-slate-700 rounded-md shadow-custom p-3">
+      <div class="bg-slate-700 rounded-md shadow-custom-lg dark:shadow-custom p-3">
         <div class="flex *:mx-2 justify-center text-center mb-3 py-3 border-b-slate-600 border-b-2">
           <div>
             <a href="https://github.com/rizkikadafi" class="text-xs block">

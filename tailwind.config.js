@@ -23,7 +23,8 @@ module.exports = {
         // 'radial-gradient-diagonal': 'radial-gradient(at bottom right, #334155 0%, #1E2A3B 60%), radial-gradient(at top left, #334155 0%, #1E2A3B 60%)',
       },
       boxShadow: {
-        'custom': "4px 6px 15px 0px rgba(0, 0, 0, 0.3)"
+        'custom': "4px 6px 15px 0px rgba(0, 0, 0, 0.3)",
+        'custom-lg': "4px 6px 15px 0px rgba(0, 0, 0, 0.5)"
       },
     },
   },
