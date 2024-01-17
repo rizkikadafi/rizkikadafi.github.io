@@ -4,32 +4,31 @@ title: Kadafi's Portfolio
 permalink: /
 ---
 <div class="w-full *:pb-8">
-  {% include sticky-navbar.html %}
+  <nav id="nav"
+    class="flex justify-between flex-grow-1 fixed right-3 left-3 top-3 text-gray-200 z-10 items-center px-5 py-3 rounded-md transition">
+    <a href="{{site.baseurl}}/" class="relative font-medium text-md lg:text-xl">Rizki Kadafi</a>
+    <div class="flex">
+      <ul class="hidden sm:flex *:mx-5">
+        {% for item in site.data.navigation %}
+        <li class="hover:underline hover:underline-offset-4"><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="*:cursor-pointer">
+        <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
+        <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
+        <i data-modal-target="default-modal" data-modal-toggle="default-modal" class="bi bi-list sm:hidden text-xl"></i>
+      </div>
+    </div>
+  </nav>
   <section id="hero" class="*:text-white h-72 sm:h-96 lg:h-screen p-3 dark:bg-radial-gradient-bottom-left">
     {% include modal-navigation.html %}
     <div
       class="hero-image bg-hero2 dark:bg-hero1 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom-lg dark:shadow-custom">
+
       <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-3 lg:p-8">
-        <nav id="default-nav" class="flex justify-between flex-grow-1">
-          <a href="{{site.baseurl}}/" class="relative font-medium text-md sm:text-xl">Rizki Kadafi</a>
-          <div class="flex">
-            <ul class="hidden sm:flex *:mx-5">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#technology">Technolgy</a></li>
-              <li><a href="#blog">Blog</a></li>
-            </ul>
-            <div class="*:cursor-pointer">
-              <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
-              <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
-              <i data-modal-target="top-right-modal" data-modal-toggle="top-right-modal"
-                class="bi bi-list sm:hidden text-xl"></i>
-            </div>
-          </div>
-        </nav>
         <div class="h-full flex flex-col justify-center items-center">
-          <h1 class="font-bold text-xl lg:text-3xl">🚀 Hi, I'm Muhamad Rizki 🚀</h1>
-          <div class="text-xs lg:text-base text-center my-3 sm:my-4">
+          <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">🚀 Hi, I'm Muhamad Rizki 🚀</h1>
+          <div class="text-xs sm:text-base text-center my-3 sm:my-4">
             <p>
               A tech and open-source 🌐 enthusiast!
             </p>

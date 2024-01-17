@@ -1,5 +1,6 @@
 const stickyNav = document.getElementById('sticky-nav');
 const defaultNav = document.getElementById('default-nav');
+const nav = document.getElementById('nav');
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
@@ -9,13 +10,15 @@ function handleScroll() {
   if (!ticking) {
     window.requestAnimationFrame(function() {
       if (lastKnownScrollPosition !== 0) {
-        stickyNav.classList.remove('invisible', 'translate-y-5');
-        stickyNav.classList.add('transform-none', '-translate-y-5');
-        defaultNav.classList.add('invisible')
+        nav.classList.add(
+          'shadow-custom-lg', 'bg-slate-800/70',
+          'dark:shadow-custom', 'duration-500', 'backdrop-blur-md'
+        )
       } else {
-        defaultNav.classList.remove('invisible')
-        stickyNav.classList.add('invisible');
-        stickyNav.classList.remove('transform-none');
+        nav.classList.remove(
+          'shadow-custom-lg', 'bg-slate-800/70',
+          'dark:shadow-custom', 'duration-500', 'backdrop-blur-md'
+        )
       }
       ticking = false;
     });
