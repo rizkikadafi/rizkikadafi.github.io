@@ -4,6 +4,8 @@
   link: "#about"
 - name: Technology
   link: "#technology"
+- name: Projects
+  link: "#project"
 - name: Blog
   link: /blog.html
 

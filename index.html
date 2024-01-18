@@ -3,10 +3,9 @@ layout: default
 title: Kadafi's Portfolio
 permalink: /
 ---
-<div class="w-full *:pb-8">
-  <nav id="nav"
-    class="flex justify-between flex-grow-1 fixed right-3 left-3 top-3 text-gray-200 z-10 items-center px-5 py-3 rounded-md transition">
-    <a href="{{site.baseurl}}/" class="relative font-medium text-md lg:text-xl">Rizki Kadafi</a>
+<nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition">
+  <div class="flex justify-between items-center h-full">
+    <a href="{{site.baseurl}}/" class="font-medium text-md lg:text-xl">Rizki Kadafi</a>
     <div class="flex">
       <ul class="hidden sm:flex *:mx-5">
         {% for item in site.data.navigation %}
@@ -19,11 +18,15 @@ permalink: /
         <i data-modal-target="default-modal" data-modal-toggle="default-modal" class="bi bi-list sm:hidden text-xl"></i>
       </div>
     </div>
-  </nav>
-  <section id="hero" class="*:text-white h-72 sm:h-96 lg:h-screen p-3 dark:bg-radial-gradient-bottom-left">
+  </div>
+</nav>
+
+<div class="w-full">
+
+  <section id="hero" class="h-72 sm:h-96 lg:h-screen p-3 dark:bg-radial-gradient-bottom-left">
     {% include modal-navigation.html %}
     <div
-      class="hero-image bg-hero2 dark:bg-hero1 w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom-lg dark:shadow-custom">
+      class="hero-image bg-hero2 dark:bg-hero1 text-white w-full h-full bg-no-repeat bg-center bg-cover rounded-lg shadow-custom-lg dark:shadow-custom">
 
       <div class="h-full w-full flex flex-col backdrop-brightness-50 rounded-lg p-3 lg:p-8">
         <div class="h-full flex flex-col justify-center items-center">
@@ -48,12 +51,13 @@ permalink: /
   <section id="about" class="px-5 dark:bg-radial-gradient-diagonal text-gray-800 dark:text-gray-200">
     {% include header-title.html title='About Me' subtitle='A short description about me' %}
 
-    <div class="flex flex-col">
-      <div class="bg-slate-700 rounded-md w-1/2 mx-auto mb-5 shadow-custom-lg dark:shadow-custom">
-        <img src="/assets/image/profile.png" class="mx-auto border-r-indigo-100" alt="">
+    <div class="flex flex-col px-5 md:px-10 sm:flex-row sm:mx-auto sm:items-center lg:w-4/5">
+      <div
+        class="flex-grow bg-slate-700 mb-5 sm:mb-0 rounded-md mx-auto shadow-custom-lg dark:shadow-custom w-3/5 sm:w-4/5">
+        <img src="/assets/image/profile.png" class="mx-auto" alt="">
       </div>
-      <div>
-        <p class="px-5 text-justify text-sm">
+      <div class="">
+        <p class="px-5 text-justify text-sm md:text-base lg:text-lg">
           🎓 I am a Computer Science student at Jakarta State University (Universitas Negeri Jakarta). My journey in
           technology has been an exciting exploration, one that continues to be driven by a desire to embrace innovation
           and contribute to the ever-evolving world of open source.
@@ -64,8 +68,10 @@ permalink: /
 
   <section id="technology" class="dark:bg-radial-gradient-diagonal-reverse">
     {% include header-title.html title='Technology' subtitle='The technology I use or that I am learning about' %}
-    {% include tech_card.html data=site.data.programming_languages %}
-    {% include tech_card.html data=site.data.frameworks_libraries %}
+    <div class="lg:grid lg:grid-cols-2 lg:px-8">
+      {% include tech_card.html data=site.data.programming_languages %}
+      {% include tech_card.html data=site.data.frameworks_libraries %}
+    </div>
   </section>
 
   <section id="project" class="dark:bg-radial-gradient-diagonal">

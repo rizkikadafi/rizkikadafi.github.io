@@ -11,13 +11,13 @@ function handleScroll() {
     window.requestAnimationFrame(function() {
       if (lastKnownScrollPosition !== 0) {
         nav.classList.add(
-          'shadow-custom-lg', 'bg-slate-800/70',
-          'dark:shadow-custom', 'duration-500', 'backdrop-blur-md'
+          'shadow-custom-xl', 'bg-slate-800/70', 'backdrop-blur-md',
+          'dark:shadow-custom-xl', 'duration-500'
         )
       } else {
         nav.classList.remove(
-          'shadow-custom-lg', 'bg-slate-800/70',
-          'dark:shadow-custom', 'duration-500', 'backdrop-blur-md'
+          'shadow-custom-xl', 'bg-slate-800/70', 'backdrop-blur-md',
+          'dark:shadow-custom-xl', 'duration-500'
         )
       }
       ticking = false;
