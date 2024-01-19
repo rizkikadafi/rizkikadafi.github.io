@@ -2,13 +2,21 @@
   <div class="flex flex-col justify-between h-full">
     <div class="text-center sm:text-left">
       <img src="{{ include.img }}" alt="{{ include.name }}" class="rounded-md mb-3">
-      <h4 class="font-bold">{{ include.name }}</h4>
-      <p class="text-xs">
-        {{ include.desc }}
-      </p>
+      <div class="mt-3 mb-5">
+
+        <h4 class="font-bold sm:text-lg">{{ include.name }}</h4>
+        <p class="text-xs md:text-base">
+          {{ include.desc }}
+        </p>
+      </div>
     </div>
 
-    <a href=""
-      class="text-center bg-slate-600 hover:bg-slate-800 dark:hover:bg-slate-800 active:bg-slate-700 rounded-lg py-2 px-4 text-xs lg:text-base mt-5 block w-full">Details</a>
+    <div
+      class="text-2xl flex justify-center sm:justify-start *:mx-2 sm:*:mx-0 sm:*:mr-3 *:transition-transform hover:*:scale-150 *:duration-100">
+      <a href="{{include.link.github}}" target="_blank" class=""><i class="bi bi-github"></i></a>
+      {% if include.link.deployment %}
+      <a href="{{include.link.deployment}}" target="_blank" class=""><i class="bi bi-link-45deg"></i></a>
+      {% endif %}
+    </div>
   </div>
 </div>

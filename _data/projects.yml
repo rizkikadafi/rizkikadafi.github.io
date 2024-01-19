@@ -1,15 +1,12 @@
-- name: Project 1
-  desc: Lorem ipsum dolor sit amet
-  img: /assets/image/hero1.jpg
-- name: Project 2
-  desc: Lorem ipsum dolor sit amet
-  img: /assets/image/hero2.jpg
-- name: Project 3
-  desc: Lorem ipsum dolor sit amet
-  img: /assets/image/hero1.jpg
-- name: Project 4
-  desc: Lorem ipsum dolor sit amet
-  img: /assets/image/hero2.jpg
-- name: Project 5
-  desc: Lorem ipsum dolor sit amet
-  img: /assets/image/hero1.jpg
+- name: Freecodecamp Project
+  desc: Collection of freecodecamp projects
+  link:
+    github: https://github.com/rizkikadafi/freecodecamp-project/ 
+    deployment: https://rizkikadafi.github.io/freecodecamp-project/
+  img: /assets/image/projects/freecodecamp-project.png
+- name: Codequest
+  desc: 'Codequest competition: sustainable city website'
+  link:
+    github: https://github.com/rizkikadafi/codequest/ 
+    deployment: https://rizkikadafi.github.io/codequest/
+  img: /assets/image/projects/codequest.png

@@ -1,15 +1,14 @@
 const swiper = new Swiper('.swiper', {
-  loop: true,
-  autoplay: { delay: 3000 },
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true
   },
+  loop: true,
+  autoplay: { delay: 3000 },
   effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
   breakpoints: {
     640: {
       autoplay: false,
