@@ -6,4 +6,10 @@
   img: /assets/image/hero2.jpg
 - name: Project 3
   desc: Lorem ipsum dolor sit amet
+  img: /assets/image/hero1.jpg
+- name: Project 4
+  desc: Lorem ipsum dolor sit amet
   img: /assets/image/hero2.jpg
+- name: Project 5
+  desc: Lorem ipsum dolor sit amet
+  img: /assets/image/hero1.jpg

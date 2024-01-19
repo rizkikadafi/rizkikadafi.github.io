@@ -69,35 +69,33 @@ permalink: /
   <section id="technology" class="dark:bg-radial-gradient-diagonal-reverse">
     {% include header-title.html title='Technology' subtitle='The technology I use or that I am learning about' %}
     <div class="lg:grid lg:grid-cols-2 lg:px-8">
-      {% include tech_card.html data=site.data.programming_languages %}
-      {% include tech_card.html data=site.data.frameworks_libraries %}
+      {% include tech_card.html title='Programming Languages' data=site.data.programming_languages %}
+      {% include tech_card.html title='Frameworks & Libraries' data=site.data.frameworks_libraries %}
     </div>
   </section>
 
   <section id="project" class="dark:bg-radial-gradient-diagonal">
     {% include header-title.html title='Projects' subtitle="Projects that I have worked on" %}
-    <div class="dark:text-white flex flex-grow-0 relative">
-      <div
-        class="w-full h-full absolute flex justify-between items-center text-3xl px-4 text-gray-800 dark:text-gray-200">
-        <div class="group button-prev">
-          <i class="bi bi-caret-left group-active:hidden"></i>
-          <i class="bi bi-caret-left-fill hidden group-active:block"></i>
-        </div>
-        <div class="group button-next">
-          <i class="bi bi-caret-right group-active:hidden"></i>
-          <i class="bi bi-caret-right-fill hidden group-active:block"></i>
-        </div>
+    <div class="dark:text-white flex justify-between sm:px-10 relative">
+
+      <div class="hidden sm:block sm:w-3/5">
+        <ul class="text-lg mr-8 lg:mr-10">
+          {% for item in site.data.projects %}
+          <li class="project-item cursor-pointer px-5 py-3 lg:py-5 border-b-slate-600 border-b-2">
+            {{item.name}}</li>
+          {% endfor %}
+        </ul>
       </div>
-      <div class="swiper w-3/5">
+
+      <div class="swiper w-3/5 sm:w-2/5 pb-8">
         <div class="swiper-wrapper">
           {% for item in site.data.projects %}
           {% include project_card.html name=item.name desc=item.desc img=item.img %}
           {% endfor %}
         </div>
+        <div class="swiper-pagination *:bg-white mt-20 sm:hidden"></div>
       </div>
-      <div class="hidden">
 
-      </div>
     </div>
   </section>
 
@@ -107,26 +105,13 @@ permalink: /
     <div class="px-3 mb-5 box-border text-white">
       <div class="bg-slate-700 rounded-md shadow-custom-lg dark:shadow-custom p-3">
         <div class="flex *:mx-2 justify-center text-center mb-3 py-3 border-b-slate-600 border-b-2">
-          <div>
-            <a href="https://github.com/rizkikadafi" class="text-xs block">
-              <i class="bi bi-github text-2xl"></i>
-              rizkikadafi
-            </a>
-          </div>
-          <div>
-            <a href="mailto: rizkikadafi11@gmail.com" class="text-xs block">
-              <i class="bi bi-envelope text-2xl"></i>
-              rizkikadafi11@gmail.com
-            </a>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/rizkikadafi" class="text-xs block">
-              <i class="bi bi-linkedin text-2xl"></i>
-              rizkikadafi
-            </a>
-          </div>
+          {% for item in site.data.contact %}
+
+          {% include contact.html name=item.name link=item.link icon=item.icon %}
+
+          {% endfor %}
         </div>
-        <div class="text-xs text-center">
+        <div class="text-xs lg:text-sm text-center">
           <p><i class="bi bi-c-circle"></i> 2024 Muhamad Rizki Kadafi. All Rights Reserved.</p>
         </div>
       </div>
