@@ -1,6 +1,24 @@
 ---
-layout: default
+layout: blog
 title: Kadafi's Blog
 permalink: /blog
 ---
-<h1 class="text-center text-xl dark:text-white">Welcome to My Blog</h1>
+<nav id="blog-nav"
+  class="rounded-md fixed right-3 left-3 top-3 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+  after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
+  <div class=" flex justify-between items-center h-full">
+    <a href="{{site.baseurl}}/blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
+    <div class="flex">
+      <ul class="hidden sm:flex *:mx-5">
+        {% for item in site.data.navigation %}
+        <li class="hover:underline hover:underline-offset-4"><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="*:cursor-pointer">
+        <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
+        <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
+        <i data-modal-target="default-modal" data-modal-toggle="default-modal" class="bi bi-list sm:hidden text-xl"></i>
+      </div>
+    </div>
+  </div>
+</nav>
