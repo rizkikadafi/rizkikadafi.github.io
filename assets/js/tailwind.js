@@ -25,7 +25,7 @@ tailwind.config = {
         'radial-gradient-diagonal-reverse': 'radial-gradient(at top right, #334155 0%, transparent 60%), radial-gradient(at bottom left, #334155 0%, transparent 60%)',
       },
       boxShadow: {
-        'custom': "4px 6px 15px 0px rgba(0, 0, 0, 0.3)",
+        'custom': "4px 6px 8px 0px rgba(0, 0, 0, 0.3)",
         'custom-lg': "4px 6px 15px 0px rgba(0, 0, 0, 0.5)",
         'custom-xl': "0px 0px 30px 5px rgba(0, 0, 0, 0.6)"
       },
