@@ -4,7 +4,7 @@
 
 @layer utilities {
   .bg-radial-gradient-center {
-    background: radial-gradient(at center, #64748B 0%, transparent 60%);
+    background: radial-gradient(at center, #ffffff 0%, transparent 60%);
   }
 
   .bg-radial-gradient-top-right {

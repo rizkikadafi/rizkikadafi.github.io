@@ -4,13 +4,13 @@ title: Kadafi's Blog
 permalink: /blog
 ---
 <nav id="blog-nav"
-  class="rounded-md fixed right-3 left-3 top-3 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+  class="rounded-md fixed right-0 left-0 top-0 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
   after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
   <div class=" flex justify-between items-center h-full">
     <a href="{{site.baseurl}}/blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
     <div class="flex">
       <ul class="hidden sm:flex *:mx-5">
-        {% for item in site.data.navigation %}
+        {% for item in site.data.blog-navigation %}
         <li class="hover:underline hover:underline-offset-4"><a href="{{item.link}}">{{item.name}}</a></li>
         {% endfor %}
       </ul>
@@ -22,3 +22,21 @@ permalink: /blog
     </div>
   </div>
 </nav>
+
+<div class="w-full dark:text-white">
+  <section id="hero"
+    class="h-72 sm:h-96 lg:h-screen p-5 sm:p-3 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center">
+
+    {% include blog-modal-navigation.html %}
+    <div class="text-center">
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Welcome to Kadafi's Blog</h1>
+      <p class="text-xs sm:text-base text-center my-3 sm:my-4">
+        This blog is a place for me to share my knowledge related to computer science and mathematics
+      </p>
+    </div>
+
+    <a href="{{site.baseurl}}/"
+      class="text-center bg-slate-500 hover:bg-slate-700 active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">About
+      Me</a>
+  </section>
+</div>

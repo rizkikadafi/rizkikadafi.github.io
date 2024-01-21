@@ -1,0 +1,7 @@
+- name: Home
+  link: "#hero"
+- name: Category
+  link: "#category"
+- name: Archive
+  link: /archive
+

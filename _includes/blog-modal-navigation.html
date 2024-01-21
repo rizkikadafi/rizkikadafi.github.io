@@ -1,0 +1,16 @@
+<div id="default-modal" tabindex="-1"
+  class="fixed text-white top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-2xl max-h-full">
+    <div class="relative bg-slate-800 rounded-lg shadow">
+      <div class="p-2 md:p-5 space-y-4 text-center">
+        <ul>
+          {% for item in site.data.blog-navigation %}
+          <li>
+            <a data-modal-hide="default-modal" href="{{item.link}}" class="block py-3 rounded-md">{{item.name}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
