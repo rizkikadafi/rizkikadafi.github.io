@@ -1,0 +1,29 @@
+---
+layout: category
+permalink: /blog/category
+---
+
+<section class="p-5 dark:text-white">
+  {% for category in site.categories %}
+  {% if category[0] == 'blog' %}
+  {%continue%}
+  {% endif %}
+  <h1 class="text-center font-bold text-lg">{{category[0]}}</h1>
+  <ul>
+    {% for post in category[1] %}
+
+    <li>
+      <a href="{{ post.url }}">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.date | date_to_string }} - {{ post.author }}</p>
+
+        {% if post.thumbnail %}
+        <img src="{{ post.thumbnail }}" alt="" class="w-full">
+        {% endif %}
+        {{ post.excerpt }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>

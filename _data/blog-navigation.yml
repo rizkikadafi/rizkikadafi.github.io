@@ -1,7 +1,7 @@
 - name: Home
-  link: "#hero"
+  link: "/blog"
 - name: Category
-  link: "#category"
+  link: "/blog/category"
 - name: Archive
-  link: /archive
+  link: /blog/archive
 

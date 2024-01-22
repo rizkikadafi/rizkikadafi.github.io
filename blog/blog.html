@@ -25,7 +25,7 @@ permalink: /blog
 
 <div class="w-full dark:text-white">
   <section id="hero"
-    class="h-72 sm:h-96 lg:h-screen p-5 sm:p-3 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center pt-14">
+    class="h-32 sm:h-96 lg:h-screen p-5 sm:p-3 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center pt-40">
 
     {% include blog-modal-navigation.html %}
     <div class="text-center">
@@ -38,21 +38,33 @@ permalink: /blog
     <a href="{{site.baseurl}}/"
       class="text-center bg-slate-500 hover:bg-slate-700 active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">About
       Me</a>
+
+  </section>
+
+  <section class="p-5 pt-20">
+    <div class="bg-slate-700/70 backdrop-blur-md border-slate-500 border-[1px] p-3 rounded-md shadow-custom">
+      <h2
+        class="text-xl text-center lg:text-2xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+        Blog Category
+      </h2>
+      <img src="/assets/image/blog-category/math.jpeg" alt="" class="rounded-md">
+    </div>
   </section>
 
   <section class="p-5">
     {% include header-title.html title='Latest Posts' %}
-
     <ul>
       {% for post in site.posts %}
       <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.date | date_to_string }} - {{ post.author }}</p>
+        <a href="{{ post.url }}">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.date | date_to_string }} - {{ post.author }}</p>
 
-        {% if post.thumbnail %}
-        <img src="{{ post.thumbnail }}" alt="" class="w-full">
-        {% endif %}
-        {{ post.excerpt }}
+          {% if post.thumbnail %}
+          <img src="{{ post.thumbnail }}" alt="" class="w-full">
+          {% endif %}
+          {{ post.excerpt }}
+        </a>
       </li>
       {% endfor %}
     </ul>
