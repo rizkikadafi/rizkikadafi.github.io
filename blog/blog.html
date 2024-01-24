@@ -4,7 +4,7 @@ title: Kadafi's Blog
 permalink: /blog
 ---
 <nav id="blog-nav"
-  class="fixed right-0 left-0 top-0 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+  class="bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
   after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
   <div class=" flex justify-between items-center h-full">
     <a href="{{site.baseurl}}/blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
@@ -25,48 +25,73 @@ permalink: /blog
 
 <div class="w-full dark:text-white">
   <section id="hero"
-    class="h-32 sm:h-96 lg:h-screen p-5 sm:p-3 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center pt-40">
+    class="h-72 sm:h-96 p-5 px-8 sm:px-14 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center">
 
     {% include blog-modal-navigation.html %}
-    <div class="text-center">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Welcome to Kadafi's Blog</h1>
-      <p class="text-xs sm:text-base text-center my-3 sm:my-4">
-        This blog is a place for me to share my knowledge related to computer science and mathematics
-      </p>
-    </div>
 
-    <a href="{{site.baseurl}}/"
-      class="text-center bg-slate-500 hover:bg-slate-700 active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">About
-      Me</a>
+    <div class="h-full w-full flex flex-col justify-center items-center pt-12">
+
+      <div class="text-center">
+        <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Welcome to Kadafi's Blog</h1>
+        <p class="text-xs sm:text-base text-center my-3 sm:my-4">
+          This blog is a place for me to share my knowledge related to computer science and mathematics
+        </p>
+      </div>
+
+      <a href="{{site.baseurl}}/"
+        class="text-center bg-slate-400 hover:bg-slate-500 dark:bg-slate-500 dark:hover:bg-slate-700 active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">
+        About Me
+      </a>
+    </div>
 
   </section>
 
-  <section class="p-5 pt-20">
-    <div class="bg-slate-700/70 backdrop-blur-md border-slate-500 border-[1px] p-3 rounded-md shadow-custom">
+  <section class="p-5 sm:px-12">
+    <div
+      class="mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6">
       <h2
-        class="text-xl text-center lg:text-2xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+        class="text-xl text-center lg:text-2xl font-bold mb-5 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
         Blog Category
       </h2>
-      <img src="/assets/image/blog-category/math.jpeg" alt="" class="rounded-md">
-    </div>
-  </section>
 
-  <section class="p-5">
-    {% include header-title.html title='Latest Posts' %}
-    <ul>
-      {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.date | date_to_string }} - {{ post.author }}</p>
+      <div class="swiper category-swiper mx-auto sm:w-[95%]">
+        <div class="swiper-wrapper">
 
-          {% if post.thumbnail %}
-          <img src="{{ post.thumbnail }}" alt="" class="w-full">
+          {% assign sort_category = site.categories | sort %}
+
+          {% for category in sort_category %}
+          {% if category[0] == 'blog' %}
+          {% continue %}
           {% endif %}
-          {{ post.excerpt }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+
+          {% assign sort_category_data = site.data.blog-category | sort: "name" %}
+          {% assign img = sort_category_data[forloop.index0].img %}
+          {% assign desc = sort_category_data[forloop.index0].desc %}
+
+          {% include blog-category-card.html category=category desc=desc img=img %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
   </section>
+
+  <!-- <section class="p-5"> -->
+  <!--   {% include header-title.html title='Latest Posts' %} -->
+  <!--   <ul> -->
+  <!--     {% for post in site.posts %} -->
+  <!--     <li> -->
+  <!--       <a href="{{ post.url }}"> -->
+  <!--         <h2>{{ post.title }}</h2> -->
+  <!--         <p>{{ post.date | date_to_string }} - {{ post.author }}</p> -->
+
+  <!--         {% if post.thumbnail %} -->
+  <!--         <img src="{{ post.thumbnail }}" alt="" class="w-full"> -->
+  <!--         {% endif %} -->
+  <!--         {{ post.excerpt }} -->
+  <!--       </a> -->
+  <!--     </li> -->
+  <!--     {% endfor %} -->
+  <!--   </ul> -->
+  <!-- </section> -->
 </div>

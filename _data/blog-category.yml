@@ -1,0 +1,15 @@
+- name: Blog
+  desc: Posts related to mathematical concepts in computer science 
+  img: programming.jpeg
+- name: Math
+  desc: Posts related to mathematical concepts in computer science 
+  img: math.jpeg
+- name: Programming
+  desc: Posts related to programming concepts and programming language
+  img: programming.jpeg
+- name: Web
+  desc: Posts related to web development
+  img: web.jpeg
+- name: Linux
+  desc: Posts related to the use of the Linux operating system 
+  img: linux.jpeg
