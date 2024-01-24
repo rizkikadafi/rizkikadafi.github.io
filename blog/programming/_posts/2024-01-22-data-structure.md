@@ -2,7 +2,7 @@
 layout: post
 author: Kadafi
 thumbnail: /assets/image/hero2.jpg
-tag: dsa python
+tags: dsa python
 ---
 
 A banana is an edible fruit – botanically a berry – produced by several

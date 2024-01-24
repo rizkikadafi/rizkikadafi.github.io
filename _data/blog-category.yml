@@ -5,7 +5,7 @@
   desc: Posts related to mathematical concepts in computer science 
   img: math.jpeg
 - name: Programming
-  desc: Posts related to programming concepts and programming language
+  desc: Posts related to programming concepts
   img: programming.jpeg
 - name: Web
   desc: Posts related to web development

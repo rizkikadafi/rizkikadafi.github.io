@@ -1,18 +1,26 @@
 ---
-layout: default
+layout: blog
 ---
 
-<div class="p-3 dark:text-white">
-
-  <h1>{{ page.title }}</h1>
-
-  {{page.tags}}
-  <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
+<div class="p-3 mt-14 dark:text-white">
   {% if page.thumbnail %}
-  <img src="{{ page.thumbnail }}" alt="" class="w-full">
+  <img src="{{ page.thumbnail }}" alt="" class="w-full rounded-md shadow-custom">
   {% endif %}
 
-  {{ content }}
+  {% for tag in page.tags %}
+  <a href=""
+    class="inline-block mr-2 my-3 text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] dark:text-slate-200">{{tag}}</a>
+  {% endfor %}
+
+  <div class="">
+    <h2 class="text-2xl font-bold">{{ page.title }}</h2>
+    <div>
+      <span class="text-sm">{{ page.author }} - {{ page.date | date_to_string }}</span>
+    </div>
+  </div>
+
+  <div class="*:py-2">
+    {{ content }}
+  </div>
 
 </div>

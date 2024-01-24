@@ -3,31 +3,10 @@ layout: blog
 title: Kadafi's Blog
 permalink: /blog
 ---
-<nav id="blog-nav"
-  class="bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
-  after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
-  <div class=" flex justify-between items-center h-full">
-    <a href="{{site.baseurl}}/blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
-    <div class="flex">
-      <ul class="hidden sm:flex *:mx-5">
-        {% for item in site.data.blog-navigation %}
-        <li class="hover:underline hover:underline-offset-4"><a href="{{item.link}}">{{item.name}}</a></li>
-        {% endfor %}
-      </ul>
-      <div class="*:cursor-pointer">
-        <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
-        <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
-        <i data-modal-target="default-modal" data-modal-toggle="default-modal" class="bi bi-list sm:hidden text-xl"></i>
-      </div>
-    </div>
-  </div>
-</nav>
 
 <div class="w-full dark:text-white">
-  <section id="hero"
+  <section id="dashboard"
     class="h-72 sm:h-96 p-5 px-8 sm:px-14 dark:bg-radial-gradient-top-left flex flex-col justify-center items-center">
-
-    {% include blog-modal-navigation.html %}
 
     <div class="h-full w-full flex flex-col justify-center items-center pt-12">
 
@@ -46,13 +25,11 @@ permalink: /blog
 
   </section>
 
-  <section class="p-5 sm:px-12">
+  <section id="category" class="p-5 sm:px-12">
     <div
       class="mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6">
-      <h2
-        class="text-xl text-center lg:text-2xl font-bold mb-5 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
-        Blog Category
-      </h2>
+
+      {% include header-title.html title='Category' %}
 
       <div class="swiper category-swiper mx-auto sm:w-[95%]">
         <div class="swiper-wrapper">
@@ -72,26 +49,57 @@ permalink: /blog
           {% endfor %}
         </div>
       </div>
+      <div class="w-full flex justify-between items-center mt-3 sm:px-4 lg:px-5">
+        <div class="flex">
+          <div class="group button-prev mr-3">
+            <i class="bi bi-arrow-left-circle text-3xl group-hover:hidden"></i>
+            <i class="hidden bi bi-arrow-left-circle-fill text-3xl group-hover:block"></i>
+          </div>
+          <div class="group button-next">
+            <i class="bi bi-arrow-right-circle text-3xl group-hover:hidden"></i>
+            <i class="hidden bi bi-arrow-right-circle-fill text-3xl group-hover:block"></i>
+          </div>
+        </div>
+        <a href="{{site.baseurl}}/blog/category" class="group flex justify-center items-center text-sm hover:underline">
+          <span class="block mr-2">view all category</span>
+          <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+        </a>
+      </div>
     </div>
 
   </section>
 
-  <!-- <section class="p-5"> -->
-  <!--   {% include header-title.html title='Latest Posts' %} -->
-  <!--   <ul> -->
-  <!--     {% for post in site.posts %} -->
-  <!--     <li> -->
-  <!--       <a href="{{ post.url }}"> -->
-  <!--         <h2>{{ post.title }}</h2> -->
-  <!--         <p>{{ post.date | date_to_string }} - {{ post.author }}</p> -->
+  <section id='recent' class="p-5">
+    {% include header-title.html title='Recent Posts' %}
+    {% for post in site.posts %}
+    <div
+      class="my-5 bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
-  <!--         {% if post.thumbnail %} -->
-  <!--         <img src="{{ post.thumbnail }}" alt="" class="w-full"> -->
-  <!--         {% endif %} -->
-  <!--         {{ post.excerpt }} -->
-  <!--       </a> -->
-  <!--     </li> -->
-  <!--     {% endfor %} -->
-  <!--   </ul> -->
-  <!-- </section> -->
+      {% if post.thumbnail %}
+      <img src="{{ post.thumbnail }}" alt="" class="w-full rounded-md">
+      {% endif %}
+
+      {% for tag in post.tags %}
+      <a href=""
+        class="inline-block mr-2 my-3 text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">{{tag}}</a>
+      {% endfor %}
+
+      <div>
+        <span class="text-sm">{{ post.author }} - {{ post.date | date_to_string }}</span>
+      </div>
+
+      <div class="">
+        <h2 class="text-xl font-bold">{{ post.title }}</h2>
+        <p class="text-sm text-justify">
+          {{ post.excerpt }}
+        </p>
+
+        <a href="{{post.url}}" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+          <span class="block mr-2">Read more</span>
+          <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
 </div>
