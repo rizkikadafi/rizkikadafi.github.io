@@ -2,24 +2,31 @@
 layout: blog
 ---
 
-<div class="p-3 mt-14 dark:text-white">
+<div class="p-4 sm:px-10 lg:px-20 mt-14 text-white">
   {% if page.thumbnail %}
-  <img src="{{ page.thumbnail }}" alt="" class="w-full rounded-md shadow-custom">
+  <div
+    class="w-full mb-5 h-60 sm:h-72 md:h-80 lg:h-96 bg-[url('{{page.thumbnail}}')] bg-cover bg-center rounded-md shadow-custom">
+    <div class="h-full w-full flex flex-col justify-end backdrop-brightness-50 rounded-md p-3">
+      <div>
+        <h2 class="text-2xl font-bold">{{ page.title }}</h2>
+        <div>
+          <span class="text-sm">{{ page.author }} - {{ page.date | date_to_string }}</span>
+        </div>
+      </div>
+
+      <div>
+        {% for tag in page.tags %}
+        <a href=""
+          class="inline-block mr-2 mt-2 w-fit text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] dark:text-slate-200">{{tag}}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
   {% endif %}
 
-  {% for tag in page.tags %}
-  <a href=""
-    class="inline-block mr-2 my-3 text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] dark:text-slate-200">{{tag}}</a>
-  {% endfor %}
 
-  <div class="">
-    <h2 class="text-2xl font-bold">{{ page.title }}</h2>
-    <div>
-      <span class="text-sm">{{ page.author }} - {{ page.date | date_to_string }}</span>
-    </div>
-  </div>
-
-  <div class="*:py-2">
+  <div class="*:py-2 *:text-justify text-slate-800 dark:text-white">
     {{ content }}
   </div>
 
