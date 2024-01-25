@@ -67,13 +67,14 @@ permalink: /blog
 
   <section id='recent' class="p-5">
     {% include header-title.html title='Recent Posts' %}
-    <div class="mt-5 flex flex-col gap-8 *:gap-8 sm:w-[90%] mx-auto">
-      <div class="flex sm:flex-wrap lg:flex-nowrap">
+    <div
+      class="mt-5 flex *:flex flex-col *:flex-col gap-8 *:gap-8 sm:w-[90%] mx-auto *:sm:flex-row *:sm:flex-wrap *:lg:flex-nowrap">
+      <div>
         {% for post in site.posts limit: 2 %}
         {% include blog-post-card.html post=post %}
         {% endfor %}
       </div>
-      <div class="flex sm:flex-wrap lg:flex-nowrap">
+      <div>
         {% for post in site.posts limit: 3 offset: continue %}
         {% include blog-post-card.html post=post %}
         {% endfor %}
