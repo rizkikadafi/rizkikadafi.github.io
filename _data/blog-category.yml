@@ -15,3 +15,7 @@
   desc: Posts related to the use of the Linux operating system 
   img: linux.jpeg
   link: /blog/category/math
+- name: General
+  desc: Posts related to general topic and sharing my opinion 
+  img: general.jpeg
+  link: /blog/category/general

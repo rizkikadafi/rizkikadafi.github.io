@@ -69,7 +69,7 @@ permalink: /blog
     {% include header-title.html title='Recent Posts' %}
     <div
       class="mt-5 flex *:flex flex-col *:flex-col gap-8 *:gap-8 sm:w-[90%] mx-auto *:sm:flex-row *:sm:flex-wrap *:lg:flex-nowrap">
-      <div>
+      <div class="*:w-[50%]">
         {% for post in site.posts limit: 2 %}
         {% include blog-post-card.html post=post %}
         {% endfor %}

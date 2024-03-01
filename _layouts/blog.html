@@ -18,7 +18,7 @@
 <body class="bg-slate-50 dark:bg-slate-800 transition duration-500">
   {% include blog-modal-navigation.html %}
   <nav id="blog-nav"
-    class="bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 px-5 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
   after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
     <div class=" flex justify-between items-center h-full">
       <a href="{{site.baseurl}}/blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
@@ -37,7 +37,9 @@
       </div>
     </div>
   </nav>
-  {{ content }}
+  <div class="content">
+    {{ content }}
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
