@@ -9,12 +9,12 @@ function handleScroll() {
     window.requestAnimationFrame(function() {
       if (lastKnownScrollPosition !== 0) {
         nav.classList.add(
-          'shadow-custom-xl', 'bg-slate-800/70', 'backdrop-blur-md',
+          'shadow-custom-xl', 'bg-slate-700/70', 'dark:bg-slate-800/70', 'backdrop-blur-md',
           'dark:shadow-custom-xl', 'duration-500'
         )
       } else {
         nav.classList.remove(
-          'shadow-custom-xl', 'bg-slate-800/70', 'backdrop-blur-md',
+          'shadow-custom-xl', 'bg-slate-700/70', 'dark:bg-slate-800/70', 'backdrop-blur-md',
           'dark:shadow-custom-xl', 'duration-500'
         )
       }

@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: "https://rizkikadafi.github.io/"
 url: ""
 postcss:
   cache: false

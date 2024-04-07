@@ -19,7 +19,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const activeStyles = ['bg-slate-700', 'rounded-md']
+const activeStyles = ['bg-slate-600/70', 'dark:bg-slate-700', 'rounded-md']
 const items = document.querySelectorAll('.project-item')
 const arrayItems = Array.from(items)
 let currentIndex = 0

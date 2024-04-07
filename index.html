@@ -1,9 +1,12 @@
 ---
 layout: default
 title: Kadafi's Portfolio
-permalink: /
 ---
 <nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition">
+  <div
+    class="hidden dark:shadow-custom-xl dark:bg-slate-800/70 bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
+    hello
+  </div>
   <div class="flex justify-between items-center h-full">
     <a href="{{site.baseurl}}/" class="font-medium text-md lg:text-xl">Rizki Kadafi</a>
     <div class="flex">
@@ -43,12 +46,12 @@ permalink: /
     </div>
   </section>
 
-  <section id="about" class="px-5 dark:bg-radial-gradient-diagonal text-gray-800 dark:text-gray-200 pt-20 ">
+  <section id="about" class="px-5 dark:bg-radial-gradient-diagonal text-gray-800 dark:text-gray-200 pt-20 lg:pt-5">
     {% include header-title.html title='About Me' subtitle='A short description about me' %}
 
     <div class="flex flex-col px-5 md:px-10 sm:flex-row sm:mx-auto sm:items-center lg:w-4/5">
       <div
-        class="flex-grow bg-slate-700 mb-5 sm:mb-0 rounded-md mx-auto shadow-custom-lg dark:shadow-custom w-3/5 sm:w-4/5">
+        class="flex-grow bg-slate-600/70 dark:bg-slate-700 mb-5 sm:mb-0 rounded-md mx-auto shadow-custom-lg dark:shadow-custom w-3/5 sm:w-4/5">
         <img src="/assets/image/profile.png" class="mx-auto" alt="">
       </div>
       <div class="">
@@ -59,7 +62,7 @@ permalink: /
     </div>
   </section>
 
-  <section id="technology" class="dark:bg-radial-gradient-diagonal-reverse pt-20">
+  <section id="technology" class="dark:bg-radial-gradient-diagonal-reverse pt-20 lg:pt-5">
     {% include header-title.html title='Technology' subtitle='The technology I use or that I am learning about' %}
     <div class="lg:grid lg:grid-cols-2 lg:px-8">
       {% include tech_card.html title='Programming Languages' data=site.data.programming_languages %}
@@ -67,15 +70,17 @@ permalink: /
     </div>
   </section>
 
-  <section id="project" class="dark:bg-radial-gradient-diagonal pt-20">
+  <section id="project" class="dark:bg-radial-gradient-diagonal pt-20 lg:pt-5">
     {% include header-title.html title='Projects' subtitle="Projects that I have worked on" %}
     <div class="dark:text-white flex justify-between sm:px-10 relative">
 
       <div class="hidden sm:block sm:w-3/5">
         <ul class="text-lg mr-8 lg:mr-10">
           {% for item in site.data.projects %}
-          <li class="project-item cursor-pointer px-5 py-3 lg:py-5 border-b-slate-600 border-b-2">
-            {{item.name}}</li>
+          <li
+            class="project-item cursor-pointer px-5 py-3 lg:py-5 border-b-slate-500 dark:border-b-slate-600 border-b-2">
+            {{item.name}}
+          </li>
           {% endfor %}
         </ul>
       </div>
@@ -92,11 +97,11 @@ permalink: /
     </div>
   </section>
 
-  <section id="contact" class="dark:bg-radial-gradient-top-right pt-20">
+  <section id="contact" class="dark:bg-radial-gradient-top-right pt-20 lg:pt-5">
     {% include header-title.html title='Contact Me' subtitle="Let's connect with me" %}
 
     <div class="px-3 mb-5 box-border text-white">
-      <div class="bg-slate-700 rounded-md shadow-custom-lg dark:shadow-custom p-3">
+      <div class="bg-slate-600/70 dark:bg-slate-700 rounded-md shadow-custom-lg dark:shadow-custom p-3">
         <div class="flex *:mx-2 justify-center text-center mb-3 py-3 border-b-slate-600 border-b-2">
           {% for item in site.data.contact %}
 
