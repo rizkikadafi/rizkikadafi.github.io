@@ -1,7 +1,6 @@
 ---
 layout: post
 author: Kadafi
-thumbnail: /assets/image/hero1.jpg
 tags: vim editor
 ---
 
