@@ -1,23 +1,396 @@
----
-layout: blog
-permalink: /blog/category
----
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
-<div class="w-full dark:text-white">
-  {% for category in site.categories %}
-  {% if category[0] == 'blog' %}
-  {%continue%}
-  {% endif %}
-  <section id="{{category[0]}}" class="lg:px-5 flex flex-col justify-center items-center pt-14">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <title></title>
+
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-800 transition duration-500">
+  <div id="default-modal" tabindex="-1"
+  class="fixed text-white top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-2xl max-h-full">
+    <div class="relative bg-slate-800 rounded-lg shadow">
+      <div class="p-2 md:p-5 space-y-4 text-center">
+        <ul>
+          
+          <li>
+            <a data-modal-hide="default-modal" href="/blog" class="block py-3 rounded-md">Dashboard</a>
+          </li>
+          
+          <li>
+            <a data-modal-hide="default-modal" href="/blog/category" class="block py-3 rounded-md">Category</a>
+          </li>
+          
+          <li>
+            <a data-modal-hide="default-modal" href="/blog/#recent" class="block py-3 rounded-md">Recent Post</a>
+          </li>
+          
+          <li>
+            <a data-modal-hide="default-modal" href="/blog/archive" class="block py-3 rounded-md">Archive</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <nav id="blog-nav"
+    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+  after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
+    <div class="hidden after:origin-bottom-left after:scale-x-100 dark:bg-slate-800/70 backdrop-blur-md">
+
+    </div>
+    <div class=" flex justify-between items-center h-full">
+      <a href="https://rizkikadafi.github.io//blog" class="font-medium text-md lg:text-xl">Kadafi's Blog</a>
+      <div class="flex">
+        <ul class="hidden sm:flex *:mx-5">
+          
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog">Dashboard</a></li>
+          
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/category">Category</a></li>
+          
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/#recent">Recent Post</a></li>
+          
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/archive">Archive</a></li>
+          
+        </ul>
+        <div class="*:cursor-pointer">
+          <i id="dark-mode" class="bi bi-moon-stars-fill mr-2 text-lg dark:hidden"></i>
+          <i id="light-mode" class="bi bi-brightness-high-fill mr-2 text-xl hidden dark:inline-block"></i>
+          <i data-modal-target="default-modal" data-modal-toggle="default-modal"
+            class="bi bi-list sm:hidden text-xl"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    <div class="w-full dark:text-white">
+  
+  
+  
+  
+  <section id="math" class="lg:px-5 flex flex-col justify-center items-center pt-14">
     <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">{{category[0] | capitalize}}</h1>
-      <p class="w-3/5">{{page.desc}}</p>
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Math</h1>
+      <p class="w-3/5"></p>
     </div>
     <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      {% for post in category[1] %}
-      {% include blog-post-card.html post=post %}
-      {% endfor %}
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">integral</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 22 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Integral</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/math/2024/01/22/integral.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">calculus</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 22 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Calculus</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/math/2024/01/22/calculus.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
     </div>
   </section>
-  {% endfor %}
+  
+  
+  <section id="programming" class="lg:px-5 flex flex-col justify-center items-center pt-14">
+    <div class="text-center mb-5">
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Programming</h1>
+      <p class="w-3/5"></p>
+    </div>
+    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero2.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">dsa</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">python</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 22 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Data Structure</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/programming/2024/01/22/data-structure.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
 </div>
+
+      
+    </div>
+  </section>
+  
+  
+  <section id="linux" class="lg:px-5 flex flex-col justify-center items-center pt-14">
+    <div class="text-center mb-5">
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Linux</h1>
+      <p class="w-3/5"></p>
+    </div>
+    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">vim</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">editor</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 24 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Vim Introduction</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/linux/2024/01/24/vim-introduction.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
+    </div>
+  </section>
+  
+  
+  <section id="web" class="lg:px-5 flex flex-col justify-center items-center pt-14">
+    <div class="text-center mb-5">
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Web</h1>
+      <p class="w-3/5"></p>
+    </div>
+    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">tailwind</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">css</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 24 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Tailwind</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/web/2024/01/24/tailwind.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">react</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">javascript</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 24 Jan 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">React Js</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+    </p>
+
+    <a href="/blog/web/2024/01/24/react-JS.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
+    </div>
+  </section>
+  
+  
+  <section id="general" class="lg:px-5 flex flex-col justify-center items-center pt-14">
+    <div class="text-center mb-5">
+      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">General</h1>
+      <p class="w-3/5"></p>
+    </div>
+    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
+      
+      <div
+  class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
+
+  
+  <img src="/assets/image/blog-assets/general/kode-bisat.png" alt="" class="w-full rounded-md">
+  
+
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">beasiswa</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">codepolitan</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">alibaba</a>
+  
+  <a href=""
+    class="inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] text-slate-200">kodebisat</a>
+  
+
+  <div>
+    <span class="text-sm">Kadafi - 29 Feb 2024</span>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-xl font-bold">Panduan maskimal menjadi developer handal bersama codepolitan dan alibaba cloud</h2>
+    <p class="text-sm text-justify mt-2">
+      <p>
+  Pada era digital saat ini, menjadi seorang pengembang perangkat lunak atau developer
+  merupakan salah satu profesi yang sangat diminati. Dunia teknologi terus berkembang pesat,
+  dan permintaan akan pengembang yang kompeten terus meningkat.
+  
+    </p>
+
+    <a href="/blog/general/2024/02/29/Panduan-Maskimal-Menjadi-Developer-Handal-Bersama-Codepolitan-dan-Alibaba-Cloud.html" class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline">
+      <span class="block mr-2">Read more</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
+  </div>
+</div>
+
+      
+    </div>
+  </section>
+  
+</div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script src="/assets/js/toggle_dark.js"></script>
+  <script src="/assets/js/blog-navbar.js"></script>
+  <script src="/assets/js/blog-category-swiper.js"></script>
+</body>
+
+</html>
