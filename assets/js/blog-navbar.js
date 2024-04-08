@@ -7,7 +7,7 @@ function handleScroll() {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    const stickyStyle = ['after:origin-bottom-left', 'after:scale-x-100', 'dark:bg-slate-800/70', 'backdrop-blur-md']
+    const stickyStyle = ['after:origin-bottom-left', 'after:scale-x-100', 'backdrop-blur-md']
     window.requestAnimationFrame(function() {
       if (lastKnownScrollPosition !== 0) {
         blogNav.classList.add(...stickyStyle)

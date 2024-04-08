@@ -11,7 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
 
-  <title></title>
+  <title>Kadafi's Blog </title>
 
 </head>
 
@@ -28,7 +28,7 @@
           </li>
           
           <li>
-            <a data-modal-hide="default-modal" href="/blog/category" class="block py-3 rounded-md">Category</a>
+            <a data-modal-hide="default-modal" href="/blog/categories" class="block py-3 rounded-md">Category</a>
           </li>
           
           <li>
@@ -46,7 +46,7 @@
 </div>
 
   <nav id="blog-nav"
-    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-slate-700/70 fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
   after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
     <div class="hidden after:origin-bottom-left after:scale-x-100 dark:bg-slate-800/70 backdrop-blur-md">
 
@@ -58,7 +58,7 @@
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog">Dashboard</a></li>
           
-          <li class="hover:underline hover:underline-offset-4"><a href="/blog/category">Category</a></li>
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/categories">Category</a></li>
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog/#recent">Recent Post</a></li>
           
@@ -84,40 +84,40 @@
     
     
 
-    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="math">
+    <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
+    py-[2px] text-slate-200" data-category="math" id="category-btn">
     Math
     </span>
 
     
     
 
-    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="programming">
+    <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
+    py-[2px] text-slate-200" data-category="programming" id="category-btn">
     Programming
     </span>
 
     
     
 
-    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="linux">
+    <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
+    py-[2px] text-slate-200" data-category="linux" id="category-btn">
     Linux
     </span>
 
     
     
 
-    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="web">
+    <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
+    py-[2px] text-slate-200" data-category="web" id="category-btn">
     Web
     </span>
 
     
     
 
-    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="general">
+    <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
+    py-[2px] text-slate-200" data-category="general" id="category-btn">
     General
     </span>
 
@@ -157,7 +157,7 @@
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=integral"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">integral</a>
     
 
@@ -193,7 +193,7 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=calculus"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">calculus</a>
     
 
@@ -243,10 +243,10 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=dsa"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">dsa</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=python"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">python</a>
     
 
@@ -294,10 +294,10 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=vim"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">vim</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=editor"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">editor</a>
     
 
@@ -347,10 +347,10 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=tailwind"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">tailwind</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=css"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">css</a>
     
 
@@ -386,10 +386,10 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=react"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">react</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=javascript"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">javascript</a>
     
 
@@ -439,16 +439,16 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
     </div>
 
     
-    <a href=""
+    <a href="/blog/tags?tag=beasiswa"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">beasiswa</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=codepolitan"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">codepolitan</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=alibaba"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">alibaba</a>
     
-    <a href=""
+    <a href="/blog/tags?tag=kodebisat"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">kodebisat</a>
     
 
@@ -486,6 +486,7 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   <script src="/assets/js/toggle_dark.js"></script>
   <script src="/assets/js/blog-navbar.js"></script>
   <script src="/assets/js/category.js"></script>
+  <script src="/assets/js/tag.js"></script>
   <script src="/assets/js/blog-category-swiper.js"></script>
 </body>
 
