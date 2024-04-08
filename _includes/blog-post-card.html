@@ -5,10 +5,8 @@
   <img src="{{ include.post.thumbnail }}" alt="" class="w-full rounded-md">
   {% endif %}
 
-
-
   <div class="mt-3">
-    <a href="{{ include.post.url }}">
+    <a href="{{ include.post.url | relative_url }}">
       <h2 class="text-xl font-bold hover:text-sky-200">{{ include.post.title }}</h2>
     </a>
 
@@ -25,8 +23,8 @@
       {{ include.post.excerpt }}
     </p>
 
-    <a href="{{ include.post.url }}"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="{{ include.post.url | relative_url }}"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>

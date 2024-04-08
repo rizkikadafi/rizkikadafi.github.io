@@ -1,5 +1,12 @@
 baseurl: ""
 url: ""
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      permalink: blog/:title
+
 postcss:
   cache: false
 

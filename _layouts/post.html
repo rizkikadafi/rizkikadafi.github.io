@@ -2,7 +2,7 @@
 layout: blog
 ---
 
-<div class="p-4 sm:px-10 lg:px-48 lg:mt-20 mt-12 text-white">
+<div class="p-4 sm:px-10 lg:px-20 lg:mt-20 mt-12 text-white">
   {% if page.thumbnail %}
   <div class="w-full mb-5 h-60 sm:h-72 md:h-80 lg:h-96 bg-cover bg-center rounded-md shadow-custom relative"
     style="background-image: url('{{ page.thumbnail }}')">
@@ -15,7 +15,7 @@ layout: blog
         </div>
       </div>
 
-      <div class="lg:block hidden">
+      <div class="sm:block hidden">
         {% for tag in page.tags %}
         <a href=""
           class="inline-block mr-2 mt-2 w-fit text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] dark:text-slate-200">{{tag}}</a>
@@ -39,6 +39,12 @@ layout: blog
   </div>
   {% endif %}
 
+  <div class="sm:hidden px-2">
+    {% for tag in page.tags %}
+    <a href=""
+      class="inline-block mr-2 mt-2 w-fit text-sm bg-slate-500/70 backdrop-blur-md rounded-xl px-4 py-[2px] dark:text-slate-200">{{tag}}</a>
+    {% endfor %}
+  </div>
 
   <div class="px-2 md:px-0 *:py-2 *:text-justify lg:text-base text-sm text-slate-800 dark:text-white mt-5">
     {{ content }}
