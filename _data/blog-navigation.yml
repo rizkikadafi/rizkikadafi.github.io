@@ -1,7 +1,7 @@
 - name: Dashboard
   link: "/blog"
 - name: Category
-  link: "/blog/category"
+  link: "/blog/categories"
 - name: Recent Post
   link: "/blog/#recent"
 - name: Archive

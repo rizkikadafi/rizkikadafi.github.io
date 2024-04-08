@@ -1,41 +1,34 @@
 ---
 layout: blog
-permalink: /blog/category
+permalink: /blog/tags
 ---
 
 <div class="px-8">
-  <div id="categories-btn"
+  <div id="tags-btn"
     class="flex flex-wrap mt-20 mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6"">
 
-    {% for category in site.categories %}
-    {% if category[0] == 'blog' %}
-    {%continue%}
-    {% endif %}
-
+    {% for tag in site.tags %}
     <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
-    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="{{ category[0] }}">
-    {{ category[0] | capitalize }}
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-tag="{{ tag[0] }}">
+    {{ tag[0] | capitalize }}
     </span>
 
     {% endfor %}
 
   </div>
 
-  <div id="categories" class="w-full dark:text-white">
-    {% for category in site.categories %}
-    {% if category[0] == 'blog' %}
-    {%continue%}
-    {% endif %}
-    <section id="{{category[0]}}" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+  <div id="tags" class="w-full dark:text-white">
+    {% for tag in site.tags %}
+    <section id="{{tag[0]}}" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
       <div class="text-center mb-5">
         <h1
           class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
-          {{category[0] | capitalize}}
+          {{tag[0] | capitalize}}
         </h1>
         <p class="w-3/5">{{page.desc}}</p>
       </div>
       <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
-        {% for post in category[1] %}
+        {% for post in tag[1] %}
         {% include blog-post-card.html post=post %}
         {% endfor %}
       </div>

@@ -15,7 +15,7 @@
     </div>
 
     {% for tag in include.post.tags %}
-    <a href=""
+    <a href="/blog/tags?tag={{ tag }}"
       class="inline-block mr-2 mt-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200">{{tag}}</a>
     {% endfor %}
 

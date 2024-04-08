@@ -11,14 +11,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
 
-  <title>{{page.title}}</title>
+  <title>Kadafi's Blog {% if page.title %} | {{page.title}} {% endif %}</title>
 
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-800 transition duration-500 lg:px-24">
   {% include blog-modal-navigation.html %}
   <nav id="blog-nav"
-    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-transparent fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
+    class="px-10 lg:px-20 bg-slate-300/70 dark:bg-slate-700/70 fixed right-0 left-0 top-0 dark:text-gray-200 z-10 py-3 lg:py-5 transition duration-300 border-slate-600 text-gray-900
   after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-500 after:transition-transform after:mt-3 after:absolute after:bottom-0 after:left-0 after:rounded-md after:px-3">
     <div class="hidden after:origin-bottom-left after:scale-x-100 dark:bg-slate-800/70 backdrop-blur-md">
 
@@ -53,6 +53,7 @@
   <script src="/assets/js/toggle_dark.js"></script>
   <script src="/assets/js/blog-navbar.js"></script>
   <script src="/assets/js/category.js"></script>
+  <script src="/assets/js/tag.js"></script>
   <script src="/assets/js/blog-category-swiper.js"></script>
 </body>
 
