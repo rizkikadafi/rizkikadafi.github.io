@@ -75,29 +75,80 @@
     </div>
   </nav>
   <div class="content">
-    <div class="w-full dark:text-white">
-  
-  
-  
-  
-  <section id="math" class="lg:px-5 flex flex-col justify-center items-center pt-14">
-    <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Math</h1>
-      <p class="w-3/5"></p>
-    </div>
-    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      
-      <div
+    <div class="px-8">
+  <div id="categories-btn"
+    class="flex flex-wrap mt-20 mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6"">
+
+    
+    
+    
+    
+
+    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="math">
+    Math
+    </span>
+
+    
+    
+
+    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="programming">
+    Programming
+    </span>
+
+    
+    
+
+    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="linux">
+    Linux
+    </span>
+
+    
+    
+
+    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="web">
+    Web
+    </span>
+
+    
+    
+
+    <span id=" category-btn" class=" cursor-pointer  inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70
+    backdrop-blur-md rounded-xl px-3 py-[2px] text-slate-200" data-category="general">
+    General
+    </span>
+
+    
+
+  </div>
+
+  <div id="categories" class="w-full dark:text-white">
+    
+    
+    
+    
+    <section id="math" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+      <div class="text-center mb-5">
+        <h1
+          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+          Math
+        </h1>
+        <p class="w-3/5"></p>
+      </div>
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/math/2024/01/22/integral.html">
+    <a href="/blog/integral">
       <h2 class="text-xl font-bold hover:text-sky-200">Integral</h2>
     </a>
 
@@ -116,26 +167,24 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/math/2024/01/22/integral.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/integral"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-      <div
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/math/2024/01/22/calculus.html">
+    <a href="/blog/calculus">
       <h2 class="text-xl font-bold hover:text-sky-200">Calculus</h2>
     </a>
 
@@ -154,37 +203,38 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/math/2024/01/22/calculus.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/calculus"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-    </div>
-  </section>
-  
-  
-  <section id="programming" class="lg:px-5 flex flex-col justify-center items-center pt-14">
-    <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Programming</h1>
-      <p class="w-3/5"></p>
-    </div>
-    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      
-      <div
+        
+      </div>
+    </section>
+    
+    
+    <section id="programming" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+      <div class="text-center mb-5">
+        <h1
+          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+          Programming
+        </h1>
+        <p class="w-3/5"></p>
+      </div>
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/hero2.jpg" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/programming/2024/01/22/data-structure.html">
+    <a href="/blog/data-structure">
       <h2 class="text-xl font-bold hover:text-sky-200">Data Structure</h2>
     </a>
 
@@ -206,35 +256,36 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/programming/2024/01/22/data-structure.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/data-structure"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-    </div>
-  </section>
-  
-  
-  <section id="linux" class="lg:px-5 flex flex-col justify-center items-center pt-14">
-    <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Linux</h1>
-      <p class="w-3/5"></p>
-    </div>
-    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      
-      <div
+        
+      </div>
+    </section>
+    
+    
+    <section id="linux" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+      <div class="text-center mb-5">
+        <h1
+          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+          Linux
+        </h1>
+        <p class="w-3/5"></p>
+      </div>
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/linux/2024/01/24/vim-introduction.html">
+    <a href="/blog/vim-introduction">
       <h2 class="text-xl font-bold hover:text-sky-200">Vim Introduction</h2>
     </a>
 
@@ -256,37 +307,38 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/linux/2024/01/24/vim-introduction.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/vim-introduction"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-    </div>
-  </section>
-  
-  
-  <section id="web" class="lg:px-5 flex flex-col justify-center items-center pt-14">
-    <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Web</h1>
-      <p class="w-3/5"></p>
-    </div>
-    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      
-      <div
+        
+      </div>
+    </section>
+    
+    
+    <section id="web" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+      <div class="text-center mb-5">
+        <h1
+          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+          Web
+        </h1>
+        <p class="w-3/5"></p>
+      </div>
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/web/2024/01/24/tailwind.html">
+    <a href="/blog/tailwind">
       <h2 class="text-xl font-bold hover:text-sky-200">Tailwind</h2>
     </a>
 
@@ -308,26 +360,24 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/web/2024/01/24/tailwind.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/tailwind"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-      <div
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/hero1.jpg" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/web/2024/01/24/react-JS.html">
+    <a href="/blog/react-JS">
       <h2 class="text-xl font-bold hover:text-sky-200">React Js</h2>
     </a>
 
@@ -349,37 +399,38 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 
     </p>
 
-    <a href="/blog/web/2024/01/24/react-JS.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/react-JS"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-    </div>
-  </section>
-  
-  
-  <section id="general" class="lg:px-5 flex flex-col justify-center items-center pt-14">
-    <div class="text-center mb-5">
-      <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">General</h1>
-      <p class="w-3/5"></p>
-    </div>
-    <div class="w-full px-8 mb-10 grid sm:grid-cols-3 justify-center gap-5">
-      
-      <div
+        
+      </div>
+    </section>
+    
+    
+    <section id="general" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
+      <div class="text-center mb-5">
+        <h1
+          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+          General
+        </h1>
+        <p class="w-3/5"></p>
+      </div>
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        
+        <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
   <img src="/assets/image/blog-assets/general/kode-bisat.png" alt="" class="w-full rounded-md">
   
 
-
-
   <div class="mt-3">
-    <a href="/blog/general/2024/02/29/Panduan-Maskimal-Menjadi-Developer-Handal-Bersama-Codepolitan-dan-Alibaba-Cloud.html">
+    <a href="/blog/kodebisat-codepolitan">
       <h2 class="text-xl font-bold hover:text-sky-200">Panduan maskimal menjadi developer handal bersama codepolitan dan alibaba cloud</h2>
     </a>
 
@@ -409,26 +460,32 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   
     </p>
 
-    <a href="/blog/general/2024/02/29/Panduan-Maskimal-Menjadi-Developer-Handal-Bersama-Codepolitan-dan-Alibaba-Cloud.html"
-      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline  hover:text-sky-200">
+    <a href="/blog/kodebisat-codepolitan"
+      class="group w-fit mt-3 flex justify-start items-center text-sm hover:underline hover:text-sky-200">
       <span class="block mr-2">Read more</span>
       <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
     </a>
   </div>
 </div>
 
-      
-    </div>
-  </section>
-  
+        
+      </div>
+    </section>
+    
+  </div>
 </div>
 
+  </div>
+
+  <div id="top-btn" class="fixed right-5 bottom-5 hidden cursor-pointer z-50">
+    <i class="bi bi-arrow-up-circle dark:text-white text-4xl"></i>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   <script src="/assets/js/toggle_dark.js"></script>
   <script src="/assets/js/blog-navbar.js"></script>
+  <script src="/assets/js/category.js"></script>
   <script src="/assets/js/blog-category-swiper.js"></script>
 </body>
 
