@@ -3,7 +3,7 @@
 - name: Category
   link: "/blog/categories"
 - name: Recent Post
-  link: "/blog/#recent"
-- name: Archive
-  link: /blog/archive
+  link: "/blog#recent"
+- name: Archives
+  link: /blog/archives
 

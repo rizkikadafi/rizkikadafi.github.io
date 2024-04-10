@@ -1,6 +1,7 @@
 ---
 layout: blog
 permalink: /blog/categories
+title: categories
 ---
 
 <div class="px-8">
@@ -34,7 +35,7 @@ permalink: /blog/categories
         </h1>
         <p class="w-3/5">{{page.desc}}</p>
       </div>
-      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-5">
         {% for post in category[1] %}
         {% include blog-post-card.html post=post %}
         {% endfor %}
