@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Kadafi's Portfolio
 ---
+
 <nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition">
   <div
-    class="hidden dark:shadow-custom-xl dark:bg-slate-800/70 bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
+    class="hidden dark:shadow-custom-xl dark:bg-slate-700/70 bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
     hello
   </div>
   <div class="flex justify-between items-center h-full">
@@ -23,9 +23,7 @@ title: Kadafi's Portfolio
     </div>
   </div>
 </nav>
-
 <div class="w-full">
-
   <section id="hero" class="h-72 sm:h-96 lg:h-screen p-3 dark:bg-radial-gradient-bottom-left">
     {% include modal-navigation.html %}
     <div
@@ -76,7 +74,7 @@ title: Kadafi's Portfolio
 
       <div class="hidden sm:block sm:w-3/5">
         <ul class="text-lg mr-8 lg:mr-10">
-          {% for item in site.data.projects %}
+          {% for item in site.data.projects limit: 5 %}
           <li
             class="project-item cursor-pointer px-5 py-3 lg:py-5 border-b-slate-500 dark:border-b-slate-600 border-b-2">
             {{item.name}}
@@ -85,16 +83,21 @@ title: Kadafi's Portfolio
         </ul>
       </div>
 
-      <div class="swiper w-3/5 sm:w-2/5 pb-8">
+      <div class="swiper w-4/5 sm:w-2/5 pb-8">
         <div class="swiper-wrapper">
           {% for item in site.data.projects %}
-          {% include project_card.html name=item.name desc=item.desc img=item.img link=item.link %}
+          {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
           {% endfor %}
         </div>
         <div class="swiper-pagination *:bg-slate-600 *:dark:bg-white mt-20 sm:hidden"></div>
       </div>
 
     </div>
+    <a href="{{site.baseurl}}/projects"
+      class="group flex justify-center sm:justify-end items-center text-sm dark:text-white hover:underline mx-16">
+      <span class="block mr-2">view all projects</span>
+      <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+    </a>
   </section>
 
   <section id="contact" class="dark:bg-radial-gradient-top-right pt-20 lg:pt-5">
@@ -116,3 +119,5 @@ title: Kadafi's Portfolio
     </div>
   </section>
 </div>
+
+<script src="/assets/js/navbar.js"></script>

@@ -1,11 +1,20 @@
 - name: Freecodecamp Project
   desc: Collection of freecodecamp projects
+  tech:
+    - html
+    - css
+    - javascript
   link:
     github: https://github.com/rizkikadafi/freecodecamp-project/ 
     deployment: https://rizkikadafi.github.io/freecodecamp-project/
   img: /assets/image/projects/freecodecamp-project.png
+
 - name: Codequest
   desc: 'Codequest competition: sustainable city website'
+  tech:
+    - html
+    - css
+    - javascript
   link:
     github: https://github.com/rizkikadafi/codequest/ 
     deployment: https://rizkikadafi.github.io/codequest/

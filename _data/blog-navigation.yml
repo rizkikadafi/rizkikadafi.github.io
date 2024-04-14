@@ -1,6 +1,6 @@
 - name: Dashboard
   link: "/blog"
-- name: Category
+- name: Categories
   link: "/blog/categories"
 - name: Recent Post
   link: "/blog#recent"

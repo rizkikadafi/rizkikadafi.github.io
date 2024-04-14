@@ -1,11 +1,11 @@
 - name: Home
-  link: "#hero"
+  link: "/#hero"
 - name: About
-  link: "#about"
+  link: "/#about"
 - name: Technology
-  link: "#technology"
+  link: "/#technology"
 - name: Projects
-  link: "#project"
+  link: "/#project"
 - name: Blog
   link: /blog
 

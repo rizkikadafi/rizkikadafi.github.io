@@ -4,9 +4,10 @@ permalink: /blog/categories
 title: categories
 ---
 
-<div class="px-8">
-  <div id="categories-btn"
-    class="flex flex-wrap mt-20 mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6"">
+<div class="content">
+  <div class="px-8">
+    <div id="categories-btn"
+      class="flex flex-wrap mt-20 mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6"">
 
     {% for category in site.categories %}
     {% if category[0] == 'blog' %}
@@ -14,33 +15,36 @@ title: categories
     {% endif %}
 
     <span class=" cursor-pointer inline-block mr-2 my-2 text-sm w-fit bg-slate-500/70 backdrop-blur-md rounded-xl px-3
-    py-[2px] text-slate-200" data-category="{{ category[0] }}" id="category-btn">
-    {{ category[0] | capitalize }}
-    </span>
+      py-[2px] text-slate-200" data-category="{{ category[0] }}">
+      {{ category[0] | capitalize }}
+      </span>
 
-    {% endfor %}
+      {% endfor %}
 
-  </div>
+    </div>
 
-  <div id="categories" class="w-full dark:text-white">
-    {% for category in site.categories %}
-    {% if category[0] == 'blog' %}
-    {%continue%}
-    {% endif %}
-    <section id="{{category[0]}}" class="lg:px-5 hidden flex-col justify-center items-center pt-20">
-      <div class="text-center mb-5">
-        <h1
-          class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
-          {{category[0] | capitalize}}
-        </h1>
-        <p class="w-3/5">{{page.desc}}</p>
-      </div>
-      <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-5">
-        {% for post in category[1] %}
-        {% include blog-post-card.html post=post %}
-        {% endfor %}
-      </div>
-    </section>
-    {% endfor %}
+    <div id="categories" class="w-full dark:text-white">
+      {% for category in site.categories %}
+      {% if category[0] == 'blog' %}
+      {%continue%}
+      {% endif %}
+      <section id="{{category[0]}}" class="lg:px-5 hidden flex-col justify-center items-center mt-5">
+        <div class="text-center mb-5">
+          <h1
+            class="text-2xl lg:text-3xl font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+            {{category[0] | capitalize}}
+          </h1>
+          <p class="w-3/5">{{page.desc}}</p>
+        </div>
+        <div class="w-full mb-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-5">
+          {% for post in category[1] %}
+          {% include blog-post-card.html post=post %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
   </div>
 </div>
+
+<script src="/assets/js/category.js"></script>
