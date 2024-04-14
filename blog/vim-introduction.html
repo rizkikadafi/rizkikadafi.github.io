@@ -28,7 +28,7 @@
           </li>
           
           <li>
-            <a data-modal-hide="default-modal" href="/blog/categories" class="block py-3 rounded-md">Category</a>
+            <a data-modal-hide="default-modal" href="/blog/categories" class="block py-3 rounded-md">Categories</a>
           </li>
           
           <li>
@@ -58,7 +58,7 @@
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog">Dashboard</a></li>
           
-          <li class="hover:underline hover:underline-offset-4"><a href="/blog/categories">Category</a></li>
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/categories">Categories</a></li>
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog#recent">Recent Post</a></li>
           
@@ -74,8 +74,12 @@
       </div>
     </div>
   </nav>
-  <div class="content">
-    <div class="p-4 sm:px-10 lg:px-20 lg:mt-20 mt-12 text-white">
+
+  <div id="top-btn" class="fixed right-5 bottom-5 hidden cursor-pointer z-50">
+    <i class="bi bi-arrow-up-circle dark:text-white text-4xl"></i>
+  </div>
+
+  <div class="p-4 sm:px-10 lg:px-20 lg:mt-20 mt-12 text-white">
   
   <div class="text-slate-800 dark:text-white">
     <div class="ml-1 sm:ml-0">
@@ -157,18 +161,11 @@ red, purple, or brown when ripe.</p>
   </div>
 </section>
 
-  </div>
-
-  <div id="top-btn" class="fixed right-5 bottom-5 hidden cursor-pointer z-50">
-    <i class="bi bi-arrow-up-circle dark:text-white text-4xl"></i>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   <script src="/assets/js/toggle_dark.js"></script>
   <script src="/assets/js/blog-navbar.js"></script>
-  <script src="/assets/js/category.js"></script>
-  <script src="/assets/js/tag.js"></script>
   <script src="/assets/js/blog-category-swiper.js"></script>
 </body>
 

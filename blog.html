@@ -28,7 +28,7 @@
           </li>
           
           <li>
-            <a data-modal-hide="default-modal" href="/blog/categories" class="block py-3 rounded-md">Category</a>
+            <a data-modal-hide="default-modal" href="/blog/categories" class="block py-3 rounded-md">Categories</a>
           </li>
           
           <li>
@@ -58,7 +58,7 @@
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog">Dashboard</a></li>
           
-          <li class="hover:underline hover:underline-offset-4"><a href="/blog/categories">Category</a></li>
+          <li class="hover:underline hover:underline-offset-4"><a href="/blog/categories">Categories</a></li>
           
           <li class="hover:underline hover:underline-offset-4"><a href="/blog#recent">Recent Post</a></li>
           
@@ -74,50 +74,55 @@
       </div>
     </div>
   </nav>
+
+  <div id="top-btn" class="fixed right-5 bottom-5 hidden cursor-pointer z-50">
+    <i class="bi bi-arrow-up-circle dark:text-white text-4xl"></i>
+  </div>
+
   <div class="content">
-    <div class="w-full dark:text-white">
-  <section id="dashboard" class="h-72 sm:h-96 p-5 px-8 sm:px-14 flex flex-col justify-center items-center">
-    <div class="h-full w-full flex flex-col justify-center items-center pt-12">
-      <div class="text-center">
-        <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Welcome to Kadafi's Blog</h1>
-        <p class="text-xs sm:text-base text-center my-3 sm:my-4">
-          This blog is a place for me to share my knowledge related to computer science and mathematics
-        </p>
+  <div class="w-full dark:text-white">
+    <section id="dashboard" class="h-72 sm:h-96 p-5 px-8 sm:px-14 flex flex-col justify-center items-center">
+      <div class="h-full w-full flex flex-col justify-center items-center pt-12">
+        <div class="text-center">
+          <h1 class="font-bold text-xl sm:text-2xl lg:text-3xl">Welcome to Kadafi's Blog</h1>
+          <p class="text-xs sm:text-base text-center my-3 sm:my-4">
+            This blog is a place for me to share my knowledge related to computer science and mathematics
+          </p>
+        </div>
+        <a href="/"
+          class="text-center bg-slate-400/70 border-slate-200 hover:bg-slate-700 hover:text-white dark:bg-slate-700/70 dark:hover:bg-slate-700 dark:border-slate-500 border-[1px] active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">
+          About Me
+        </a>
       </div>
-      <a href="/"
-        class="text-center bg-slate-400/70 border-slate-200 hover:bg-slate-700 hover:text-white dark:bg-slate-700/70 dark:hover:bg-slate-700 dark:border-slate-500 border-[1px] active:bg-slate-700 w-32 rounded-3xl py-2 text-xs lg:text-base">
-        About Me
-      </a>
-    </div>
-  </section>
+    </section>
 
-  <section id="category" class="p-5 sm:px-12">
-    <div
-      class="mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6">
+    <section id="category" class="p-5 sm:px-12">
+      <div
+        class="mx-auto bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-3 rounded-md shadow-custom lg:w-5/6">
 
-      <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
-        <h2
-          class="text-2xl lg:text-3xl font-bold my-5 sm:my-8 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
-          Category
-        </h2>
-      </div>
+        <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
+          <h2
+            class="text-2xl lg:text-3xl font-bold my-5 sm:my-8 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
+            Category
+          </h2>
+        </div>
 
-      <div class="swiper category-swiper mx-auto sm:w-[95%]">
-        <div class="swiper-wrapper">
+        <div class="swiper category-swiper mx-auto sm:w-[95%]">
+          <div class="swiper-wrapper">
 
-          
+            
 
-          
-          
-          
-          
+            
+            
+            
+            
 
-          
-          
-          
+            
+            
+            
 
-          <div class="swiper-slide">
-  <a href="/blog/category/general">
+            <div class="swiper-slide">
+  <a href="/blog/categories?category=general">
     <div class="relative text-white">
       <img src="/assets/image/blog-category/general.jpeg" alt="general.jpeg" class="rounded-md">
       <div
@@ -132,15 +137,15 @@
   </a>
 </div>
 
-          
-          
+            
+            
 
-          
-          
-          
+            
+            
+            
 
-          <div class="swiper-slide">
-  <a href="/blog/category/linux">
+            <div class="swiper-slide">
+  <a href="/blog/categories?category=linux">
     <div class="relative text-white">
       <img src="/assets/image/blog-category/linux.jpeg" alt="linux.jpeg" class="rounded-md">
       <div
@@ -155,15 +160,15 @@
   </a>
 </div>
 
-          
-          
+            
+            
 
-          
-          
-          
+            
+            
+            
 
-          <div class="swiper-slide">
-  <a href="/blog/category/math">
+            <div class="swiper-slide">
+  <a href="/blog/categories?category=math">
     <div class="relative text-white">
       <img src="/assets/image/blog-category/math.jpeg" alt="math.jpeg" class="rounded-md">
       <div
@@ -178,15 +183,15 @@
   </a>
 </div>
 
-          
-          
+            
+            
 
-          
-          
-          
+            
+            
+            
 
-          <div class="swiper-slide">
-  <a href="/blog/category/programming">
+            <div class="swiper-slide">
+  <a href="/blog/categories?category=programming">
     <div class="relative text-white">
       <img src="/assets/image/blog-category/programming.jpeg" alt="programming.jpeg" class="rounded-md">
       <div
@@ -201,15 +206,15 @@
   </a>
 </div>
 
-          
-          
+            
+            
 
-          
-          
-          
+            
+            
+            
 
-          <div class="swiper-slide">
-  <a href="/blog/category/web">
+            <div class="swiper-slide">
+  <a href="/blog/categories?category=web">
     <div class="relative text-white">
       <img src="/assets/image/blog-category/web.jpeg" alt="web.jpeg" class="rounded-md">
       <div
@@ -224,32 +229,32 @@
   </a>
 </div>
 
-          
-        </div>
-      </div>
-      <div class="w-full flex justify-between items-center mt-3 sm:px-4 lg:px-5">
-        <div class="flex">
-          <div class="group button-prev mr-3">
-            <i class="bi bi-arrow-left-circle text-3xl group-hover:hidden"></i>
-            <i class="hidden bi bi-arrow-left-circle-fill text-3xl group-hover:block"></i>
-          </div>
-          <div class="group button-next">
-            <i class="bi bi-arrow-right-circle text-3xl group-hover:hidden"></i>
-            <i class="hidden bi bi-arrow-right-circle-fill text-3xl group-hover:block"></i>
+            
           </div>
         </div>
-        <a href="/blog/categories"
-          class="group flex justify-center items-center text-sm hover:underline">
-          <span class="block mr-2">view all category</span>
-          <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
-        </a>
+        <div class="w-full flex justify-between items-center mt-3 sm:px-4 lg:px-5">
+          <div class="flex">
+            <div class="group button-prev mr-3">
+              <i class="bi bi-arrow-left-circle text-3xl group-hover:hidden"></i>
+              <i class="hidden bi bi-arrow-left-circle-fill text-3xl group-hover:block"></i>
+            </div>
+            <div class="group button-next">
+              <i class="bi bi-arrow-right-circle text-3xl group-hover:hidden"></i>
+              <i class="hidden bi bi-arrow-right-circle-fill text-3xl group-hover:block"></i>
+            </div>
+          </div>
+          <a href="/blog/categories"
+            class="group flex justify-center items-center text-sm hover:underline">
+            <span class="block mr-2">view all category</span>
+            <i class="bi bi-arrow-right block mt-[4px] group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
       </div>
-    </div>
 
-  </section>
+    </section>
 
-  <section id='recent' class="p-5">
-    <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
+    <section id='recent' class="p-5">
+      <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
   <h2
     class="text-2xl lg:text-3xl lg:pt-24 font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
     Recent Posts
@@ -257,10 +262,10 @@
   
 </div>
 
-    <div class="mt-5 flex flex-col sm:flex-row gap-5">
-      <div class="flex flex-col gap-5">
-        
-        <div
+      <div class="mt-5 flex flex-col sm:flex-row gap-5">
+        <div class="flex flex-col gap-5">
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -305,8 +310,8 @@ dan permintaan akan pengembang yang kompeten terus meningkat.</p>
   </div>
 </div>
 
-        
-        <div
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -344,8 +349,8 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   </div>
 </div>
 
-        
-        <div
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -383,11 +388,11 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   </div>
 </div>
 
-        
-      </div>
-      <div class="flex flex-col gap-5">
-        
-        <div
+          
+        </div>
+        <div class="flex flex-col gap-5">
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -423,8 +428,8 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   </div>
 </div>
 
-        
-        <div
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -462,8 +467,8 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   </div>
 </div>
 
-        
-        <div
+          
+          <div
   class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom transition-transform hover:-translate-y-2 duration-200">
 
   
@@ -498,13 +503,13 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
   </div>
 </div>
 
-        
+          
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="pt-20">
-    <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
+    <section id="contact" class="pt-20">
+      <div class="mb-5 text-center text-gray-800 dark:text-gray-200">
   <h2
     class="text-2xl lg:text-3xl lg:pt-24 font-bold mb-3 after:content-[''] after:h-[2px] after:w-10 after:block after:mx-auto after:bg-black after:dark:bg-white">
     Contact Me
@@ -515,14 +520,14 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 </div>
 
 
-    <div class="px-3 mb-5 box-border text-white">
-      <div
-        class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom">
+      <div class="px-3 mb-5 box-border text-white">
         <div
-          class="flex *:mx-2 justify-center text-center mb-3 py-3 border-b-slate-600 border-b-2 text-slate-800 dark:text-white">
-          
+          class="bg-slate-400/70 border-slate-200 dark:bg-slate-700/70 backdrop-blur-md dark:border-slate-500 border-[1px] p-4 rounded-md shadow-custom">
+          <div
+            class="flex *:mx-2 justify-center text-center mb-3 py-3 border-b-slate-600 border-b-2 text-slate-800 dark:text-white">
+            
 
-          <div>
+            <div>
   <a href="https://github.com/rizkikadafi" class="text-xs lg:text-sm">
     <i
       class="bi bi-github text-2xl lg:text-3xl block transition-transform hover:scale-150 duration-100"></i>
@@ -531,9 +536,9 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 </div>
 
 
-          
+            
 
-          <div>
+            <div>
   <a href="mailto:rizkikadafi11@gmail.com" class="text-xs lg:text-sm">
     <i
       class="bi bi-envelope text-2xl lg:text-3xl block transition-transform hover:scale-150 duration-100"></i>
@@ -542,9 +547,9 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 </div>
 
 
-          
+            
 
-          <div>
+            <div>
   <a href="https://www.linkedin.com/in/rizkikadafi" class="text-xs lg:text-sm">
     <i
       class="bi bi-linkedin text-2xl lg:text-3xl block transition-transform hover:scale-150 duration-100"></i>
@@ -553,28 +558,22 @@ kinds of large herbaceous flowering plants in the genus Musa.</p>
 </div>
 
 
-          
-        </div>
-        <div class="text-xs lg:text-sm text-center text-slate-800 dark:text-white">
-          <p><i class="bi bi-c-circle"></i> 2024 Muhamad Rizki Kadafi. All Rights Reserved.</p>
+            
+          </div>
+          <div class="text-xs lg:text-sm text-center text-slate-800 dark:text-white">
+            <p><i class="bi bi-c-circle"></i> 2024 Muhamad Rizki Kadafi. All Rights Reserved.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 
-  </div>
-
-  <div id="top-btn" class="fixed right-5 bottom-5 hidden cursor-pointer z-50">
-    <i class="bi bi-arrow-up-circle dark:text-white text-4xl"></i>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   <script src="/assets/js/toggle_dark.js"></script>
   <script src="/assets/js/blog-navbar.js"></script>
-  <script src="/assets/js/category.js"></script>
-  <script src="/assets/js/tag.js"></script>
   <script src="/assets/js/blog-category-swiper.js"></script>
 </body>
 

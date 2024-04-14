@@ -1,4 +1,5 @@
 const swiper = new Swiper('.swiper', {
+  autoHeight: true,
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true
