@@ -4,7 +4,7 @@ permalink: /projects
 title: Projects
 ---
 
-<nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md text-slate-700 text-white">
+<nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md">
   <div
     class="hidden dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
     hello
@@ -26,7 +26,10 @@ title: Projects
   </div>
 </nav>
 
-{% include header-title.html title='Projects' subtitle='All my projects' %}
+<div class="mt-20 lg:mt-0">
+  {% include header-title.html title='Projects' subtitle='All my projects' %}
+</div>
+
 <div class="mt-5 px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   {% include modal-navigation.html %}
 
