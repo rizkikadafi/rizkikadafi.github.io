@@ -1,11 +1,15 @@
+title: Kadafi's Portfolio
+tagline: Personal Portfolio 
+description: My personal portfolio contains my career journey and projects that have been carried out
+author: Muhamad Rizki Kadafi
+logo: /assets/image/favicon.png
+social:
+  name: Muhamad Rizki Kadafi
+  links:
+    - https://www.linkedin.com/in/rizkikadafi 
+    - https://github.com/rizkikadafi
 baseurl: ""
 url: ""
-defaults:
-  - scope:
-      path: ''
-      type: posts
-    values:
-      permalink: blog/:title
 
 postcss:
   cache: false
