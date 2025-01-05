@@ -4,9 +4,9 @@ permalink: /projects
 title: Projects
 ---
 
-<nav id="nav" class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md">
-  <div
-    class="hidden dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
+<nav id="nav"
+  class="fixed right-3 left-3 top-3 text-gray-200 z-10 px-5 py-3 lg:py-5 rounded-md transition dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md">
+  <div class="hidden dark:shadow-custom-xl bg-slate-700/70 backdrop-blur-md text-slate-700 dark:text-white">
     hello
   </div>
   <div class="flex justify-between items-center h-full">
@@ -30,39 +30,33 @@ title: Projects
   {% include header-title.html title='Projects' subtitle='All my projects' %}
 </div>
 
-<div class="mt-5 px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="mt-5 px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   {% include modal-navigation.html %}
 
   {% assign projects_per_column_last = site.data.projects | size | modulo: 4 %}
   {% assign projects_per_column = site.data.projects | size | minus: projects_per_column_last | divided_by: 4 %}
 
-  {% if site.data.projects.size <= 4 %} 
-
-    {% for i in (1..4) %} 
-      <div class="flex flex-col gap-4">
-        {% for item in site.data.projects limit: 1 offset: continue %}
-          {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
-        {% endfor %}
-      </div>
+  {% if site.data.projects.size <= 4 %} {% for i in (1..4) %} <div class="flex flex-col gap-4">
+    {% for item in site.data.projects limit: 1 offset: continue %}
+    {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
     {% endfor %}
+</div>
+{% endfor %}
 
-  {% else %}
+{% else %}
 
-    {% for j in (1..4) %}
+{% for j in (1..4) %}
 
-      <div class="flex flex-col gap-4">
-        {% for item in site.data.projects limit: projects_per_column offset: continue %}
-          {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
-        {% endfor %}
+<div class="flex flex-col gap-4">
+  {% for item in site.data.projects limit: projects_per_column offset: continue %}
+  {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
+  {% endfor %}
 
-        {% if j <= projects_per_column_last %}
-          {% for item in site.data.projects limit: 1 offset: continue %}
-            {% include project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %}
-          {% endfor %}
-        {% endif %}
-      </div>
+  {% if j <= projects_per_column_last %} {% for item in site.data.projects limit: 1 offset: continue %} {% include
+    project_card.html name=item.name desc=item.desc tech=item.tech img=item.img link=item.link %} {% endfor %} {% endif
+    %} </div>
 
     {% endfor %}
-  {% endif %}
+    {% endif %}
 
 </div>

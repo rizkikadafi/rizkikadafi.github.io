@@ -1,3 +1,27 @@
+# Template
+# - name: Freecodecamp Project
+#   desc: Collection of freecodecamp projects
+#   tech:
+#     - html
+#     - css
+#     - javascript
+#   link:
+#     github: https://github.com/rizkikadafi/freecodecamp-project/ 
+#     blog: https://rizkikadafi.github.io/blog/codequest/
+#     deployment: https://rizkikadafi.github.io/freecodecamp-project/
+#   img: /assets/image/projects/freecodecamp-project.png
+
+- name: CellSpace
+  desc: Biology Cell Learning Platform with 3D Simulation
+  tech:
+    - nextJs
+    - shadcn
+    - postgresql
+  link:
+    github: https://github.com/rizkikadafi/cell-space/ 
+    deployment: https://cell-space.vercel.app/
+  img: /assets/image/projects/cell-space.png
+
 - name: Freecodecamp Project
   desc: Collection of freecodecamp projects
   tech:
