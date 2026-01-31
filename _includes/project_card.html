@@ -21,7 +21,9 @@
 
     <div
       class="text-2xl flex justify-center sm:justify-start *:mx-2 sm:*:mx-0 sm:*:mr-3 *:transition-transform hover:*:scale-150 *:duration-100">
+      {% if include.link.github %}
       <a href="{{include.link.github}}" target="_blank" class="" title="github"><i class="bi bi-github"></i></a>
+      {% endif %}
       {% if include.link.blog %}
       <a href="{{include.link.blog}}" target="_blank" class="" title="blog"><i class="bi bi-pencil-square"></i></a>
       {% endif %}

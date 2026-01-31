@@ -11,6 +11,15 @@
 #     deployment: https://rizkikadafi.github.io/freecodecamp-project/
 #   img: /assets/image/projects/freecodecamp-project.png
 
+- name: Wakaf Energi
+  desc: ERP-based Solar Donation System for mosques.
+  tech:
+    - Odoo
+    - postgresql
+  link:
+    deployment: https://wakafenergi.id/
+  img: /assets/image/projects/wakaf-energi.png
+
 - name: CellSpace
   desc: Biology Cell Learning Platform with 3D Simulation
   tech:
