@@ -10,7 +10,9 @@ interface Props {
 
 const { featuredOnly = true, showViewAll = true } = Astro.props;
 const all = await getCollection('projects');
-const items = (featuredOnly ? all.filter((p) => p.data.featured) : all).map((p) => p.data);
+const items = (featuredOnly ? all.filter((p) => p.data.featured) : all)
+  .map((p) => p.data)
+  .sort((a, b) => b.year - a.year);
 ---
 
 <section id="projects" class="relative py-20 sm:py-28">

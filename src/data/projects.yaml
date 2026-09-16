@@ -5,6 +5,17 @@
 # links: github / deployment / blog (opsional, hapus yang tidak ada).
 # ============================================================
 
+- id: personal-blog
+  name: Personal Blog
+  desc: Blog to share knowledge, personal jurney and opinion
+  year: 2026
+  featured: true
+  tech: [Astro, JavaScript, Tailwind]
+  links:
+    github: https://github.com/rizkikadafi/blog
+    deployment: https://rizkikadafi.github.io/blog
+  img: /assets/image/projects/personal-blog.png
+
 - id: odoo-agent
   name: Odoo Agent
   desc: Knowledge Graph based Odoo agent.

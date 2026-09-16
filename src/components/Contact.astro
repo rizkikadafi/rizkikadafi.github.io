@@ -32,10 +32,10 @@ const { profile, socials } = siteEntry!.data;
 
           <a
             href={`mailto:${profile.email}`}
-            class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition duration-300 hover:-translate-y-0.5 hover:shadow-indigo-500/50"
+            class="mt-8 inline-flex w-full max-w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition duration-300 hover:-translate-y-0.5 hover:shadow-indigo-500/50 sm:w-auto sm:px-8"
           >
-            <i class="bi bi-envelope"></i>
-            {profile.email}
+            <i class="bi bi-envelope shrink-0"></i>
+            <span class="truncate">{profile.email}</span>
           </a>
 
           <div class="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">

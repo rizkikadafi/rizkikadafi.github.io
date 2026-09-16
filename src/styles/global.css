@@ -95,6 +95,7 @@ html.light {
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border: 1px solid var(--line);
+  isolation: isolate;
 }
 
 @utility glass-strong {
@@ -102,6 +103,7 @@ html.light {
   -webkit-backdrop-filter: blur(22px);
   backdrop-filter: blur(22px);
   border: 1px solid var(--line);
+  isolation: isolate;
 }
 
 @utility text-gradient {
@@ -136,6 +138,7 @@ html.light {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 .typed-cursor {
