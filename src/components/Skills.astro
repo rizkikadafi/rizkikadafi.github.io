@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import Reveal from './Reveal.astro';
+
+const categories = (await getCollection('skills')).map((entry) => entry.data);
+---
+
+<section id="skills" class="relative py-20 sm:py-28">
+  <div class="mx-auto w-full max-w-6xl px-6 sm:px-10">
+    <SectionHeading title="Skills" subtitle="Tools & tech I use to build software" />
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {categories.map((cat, i) => (
+        <Reveal delay={(i % 3) * 80}>
+          <div
+            class="glass h-full rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-[0_0_40px_-12px_rgba(167,139,250,0.4)]"
+          >
+            <div class="mb-5 flex items-center gap-3">
+              <div
+                class="inline-grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 text-lg text-white shadow-lg shadow-purple-500/30"
+              >
+                <i class={`bi ${cat.icon}`}></i>
+              </div>
+              <h3 class="font-display text-base font-semibold">{cat.title}</h3>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              {cat.items.map((item) => (
+                <a
+                  href={item.doc}
+                  target="_blank"
+                  rel="noopener"
+                  title={`${item.name} docs`}
+                  class="inline-flex items-center gap-2 rounded-full border border-(--line) bg-white/5 px-3 py-1.5 text-sm text-(--muted) transition duration-200 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:text-(--text)"
+                >
+                  {item.src ? (
+                    <img src={item.src} alt={item.name} class="h-4 w-4" loading="lazy" />
+                  ) : (
+                    <i class={`text-base leading-none text-(--muted) bi ${item.icon}`}></i>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+---
+import { getEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import Reveal from './Reveal.astro';
+
+const siteEntry = await getEntry('site', 'site');
+const aboutEntry = await getEntry('about', 'about');
+const { profile } = siteEntry!.data;
+const { about } = aboutEntry!.data;
+---
+
+<section id="about" class="relative py-20 sm:py-28">
+  <div class="mx-auto w-full max-w-6xl px-6 sm:px-10">
+    <SectionHeading title="About Me" subtitle="Passionate about software engineering & system design" />
+
+    <div class="grid items-center gap-12 lg:grid-cols-[2fr_3fr]">
+      <Reveal>
+        <div class="relative mx-auto max-w-xs">
+          <div
+            class="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-indigo-500/30 via-purple-500/30 to-cyan-400/30 blur-2xl"
+          ></div>
+          <div class="glass relative rounded-[2rem]">
+            <img
+              src={profile.avatar}
+              alt={profile.name}
+              class="w-full rounded-[1.6rem] object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="font-display text-lg font-semibold">{profile.name}</h3>
+            <p class="mt-1 text-sm text-(--muted)">{profile.location}</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <div>
+        <Reveal>
+          <div class="space-y-4 text-sm leading-relaxed text-(--muted) sm:text-base">
+            {about.bio.map((p) => (
+              <p>{p}</p>
+            ))}
+          </div>
+        </Reveal>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          {about.highlights.map((h, i) => (
+            <Reveal delay={i * 80}>
+              <div
+                class="glass h-full rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_0_40px_-12px_rgba(34,211,238,0.4)]"
+              >
+                <div
+                  class="mb-3 inline-grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 text-lg text-white shadow-lg shadow-indigo-500/30"
+                >
+                  <i class={`bi ${h.icon}`}></i>
+                </div>
+                <h4 class="font-display text-base font-semibold">{h.title}</h4>
+                <p class="mt-1.5 text-sm text-(--muted)">{h.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

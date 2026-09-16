@@ -1,0 +1,77 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Reveal from './Reveal.astro';
+
+const contactItems = (await getCollection('contact')).map((entry) => entry.data);
+const siteEntry = await getEntry('site', 'site');
+const { profile, socials } = siteEntry!.data;
+---
+
+<section id="contact" class="relative py-20 sm:py-28">
+  <div class="mx-auto w-full max-w-5xl px-6 sm:px-10">
+    <Reveal>
+      <div
+        class="glass-strong relative overflow-hidden rounded-[2rem] p-8 text-center sm:p-14"
+      >
+        <div
+          class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-indigo-600/30 blur-[100px]"
+        ></div>
+        <div
+          class="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-cyan-500/25 blur-[100px]"
+        ></div>
+
+        <div class="relative">
+          <h2 class="font-display text-2xl font-bold sm:text-4xl lg:text-5xl">
+            Let's build something
+            <span class="text-gradient"> great together</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-(--muted) sm:text-base">
+            I'm currently open to opportunities where I can turn business requirements into
+            reliable software. Have a project in mind or just want to say hi?
+          </p>
+
+          <a
+            href={`mailto:${profile.email}`}
+            class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition duration-300 hover:-translate-y-0.5 hover:shadow-indigo-500/50"
+          >
+            <i class="bi bi-envelope"></i>
+            {profile.email}
+          </a>
+
+          <div class="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
+            {contactItems.map((item) => (
+              <a
+                href={item.link}
+                target={item.link.startsWith('http') ? '_blank' : undefined}
+                rel="noopener"
+                class="glass group rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40"
+              >
+                <i
+                  class={`bi bi-${item.icon} block text-2xl text-(--muted) transition group-hover:text-cyan-400`}
+                ></i>
+                <span class="mt-2 block truncate text-sm font-medium">{item.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Reveal>
+
+    <Reveal delay={120}>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        {socials.map((s) => (
+          <a
+            href={s.link}
+            target="_blank"
+            rel="noopener"
+            aria-label={s.name}
+            title={s.name}
+            class="glass grid h-11 w-11 place-items-center rounded-xl text-lg text-(--muted) transition duration-300 hover:-translate-y-1 hover:text-[#22d3ee]"
+          >
+            <i class={`bi bi-${s.icon}`}></i>
+          </a>
+        ))}
+      </div>
+    </Reveal>
+  </div>
+</section>

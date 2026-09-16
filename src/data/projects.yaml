@@ -1,0 +1,59 @@
+# ============================================================
+# PROJECTS
+# Tambahkan proyek baru di bawah dengan format yang sama.
+# featured: true = ditampilkan di section Projects halaman utama.
+# links: github / deployment / blog (opsional, hapus yang tidak ada).
+# ============================================================
+
+- id: odoo-agent
+  name: Odoo Agent
+  desc: Knowledge Graph based Odoo agent.
+  year: 2025
+  featured: true
+  tech: [Odoo, Gitlab Knowledge Graph, Langchain, Rust, Python]
+  links:
+    github: https://github.com/rizkikadafi/odoo-agent
+  img: /assets/image/projects/kg-odoo-agent.png
+
+- id: wakaf-energi
+  name: Wakaf Energi
+  desc: ERP-based Solar Donation System for mosques.
+  year: 2025
+  featured: true
+  tech: [Odoo, PostgreSQL, Python]
+  links:
+    deployment: https://wakafenergi.id/
+  img: /assets/image/projects/wakaf-energi.png
+
+- id: cellspace
+  name: CellSpace
+  desc: Biology Cell Learning Platform with 3D Simulation.
+  year: 2024
+  featured: true
+  tech: [Next.js, shadcn, PostgreSQL]
+  links:
+    github: https://github.com/rizkikadafi/cell-space/
+    deployment: https://cell-space.vercel.app/
+  img: /assets/image/projects/cell-space.png
+
+- id: freecodecamp-project
+  name: Freecodecamp Project
+  desc: Collection of freecodecamp projects.
+  year: 2023
+  featured: false
+  tech: [HTML, CSS, JavaScript]
+  links:
+    github: https://github.com/rizkikadafi/freecodecamp-project/
+    deployment: https://rizkikadafi.github.io/freecodecamp-project/
+  img: /assets/image/projects/freecodecamp-project.png
+
+- id: codequest
+  name: Codequest
+  desc: Codequest competition — sustainable city website.
+  year: 2023
+  featured: false
+  tech: [HTML, CSS, JavaScript]
+  links:
+    github: https://github.com/rizkikadafi/codequest/
+    deployment: https://rizkikadafi.github.io/codequest/
+  img: /assets/image/projects/codequest.png

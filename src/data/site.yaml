@@ -1,0 +1,43 @@
+# ============================================================
+# SITE CONFIGURATION
+# Edit data di file ini untuk update profil, sosmed, dan stats.
+# Struktur: WAJIB mengikuti format di bawah, jangan hapus key.
+# ============================================================
+
+profile:
+  name: Muhamad Rizki Kadafi
+  firstName: Rizki
+  lastName: Kadafi
+  tagline: Software engineer, ERP developer, and problem solver — I translate business requirements into reliable web & ERP solutions, and apply AI to build software smarter and faster.
+  roles:
+    - Software Engineer
+    - Web Developer
+    - ERP Developer
+    - Open source Enthusiast
+    - AI Enthusiast
+  email: muh.rizki.kadafi@gmail.com
+  location: Indonesia
+  availability: Open to opportunities
+  avatar: /assets/image/profile3.png
+
+stats:
+  - label: Projects
+    value: "4+"
+  - label: Technologies
+    value: "15+"
+  - label: Focus
+    value: Web · ERP · AI
+
+socials:
+  - name: GitHub
+    icon: github
+    link: https://github.com/rizkikadafi
+  - name: LinkedIn
+    icon: linkedin
+    link: https://www.linkedin.com/in/rizkikadafi
+  - name: Email
+    icon: envelope
+    link: mailto:muh.rizki.kadafi@gmail.com
+  - name: Blog
+    icon: pencil-square
+    link: https://rizkikadafi.github.io/blog

@@ -1,0 +1,106 @@
+# ============================================================
+# SKILLS
+# Kategori bebas ditambah/dikurangi.
+# items: daftar skill. Isi SALAH SATU:
+#   - src : URL logo (Simple Icons CDN), contoh: https://cdn.simpleicons.org/python
+#   - icon: kelas ikon UI (boxicons) bila tidak ada logo brand, contoh: bi-robot
+# doc : link dokumentasi.
+# Cek ketersediaan slug Simple Icons: https://simpleicons.org
+# ============================================================
+
+- id: languages
+  title: Programming Languages
+  icon: bi-code-slash
+  items:
+    - name: Python
+      src: https://cdn.simpleicons.org/python
+      doc: https://www.python.org/
+    - name: JavaScript
+      src: https://cdn.simpleicons.org/javascript
+      doc: https://developer.mozilla.org/en-US/
+    - name: TypeScript
+      src: https://cdn.simpleicons.org/typescript
+      doc: https://www.typescriptlang.org/
+    - name: PHP
+      src: https://cdn.simpleicons.org/php
+      doc: https://www.php.net/
+    - name: Dart
+      src: https://cdn.simpleicons.org/dart
+      doc: https://dart.dev/
+    - name: SQL
+      src: https://cdn.simpleicons.org/mysql
+      doc: https://www.sqltutorial.org/
+
+- id: frameworks
+  title: Frameworks & Libraries
+  icon: bi-boxes
+  items:
+    - name: Flutter
+      src: https://cdn.simpleicons.org/flutter
+      doc: https://flutter.dev/
+    - name: Flask
+      src: https://cdn.simpleicons.org/flask
+      doc: https://flask.palletsprojects.com/
+    - name: Next.js
+      src: https://cdn.simpleicons.org/nextdotjs
+      doc: https://nextjs.org/
+    - name: Tailwind CSS
+      src: https://cdn.simpleicons.org/tailwindcss
+      doc: https://tailwindcss.com/
+    - name: Bootstrap
+      src: https://cdn.simpleicons.org/bootstrap
+      doc: https://getbootstrap.com/
+    - name: Odoo
+      src: https://cdn.simpleicons.org/odoo
+      doc: https://www.odoo.com/
+
+- id: databases
+  title: Databases
+  icon: bi-database
+  items:
+    - name: PostgreSQL
+      src: https://cdn.simpleicons.org/postgresql
+      doc: https://www.postgresql.org/
+    - name: MySQL
+      src: https://cdn.simpleicons.org/mysql
+      doc: https://www.mysql.com/
+    - name: Neo4j
+      src: https://cdn.simpleicons.org/neo4j
+      doc: https://neo4j.com/
+    - name: LadybugDB
+      src: https://cdn.simpleicons.org/openbugbounty
+      doc: https://ladybugdb.com/
+
+- id: tools
+  title: Tools & Platforms
+  icon: bi-tools
+  items:
+    - name: Git
+      src: https://cdn.simpleicons.org/git
+      doc: https://git-scm.com/
+    - name: GitHub
+      src: https://cdn.simpleicons.org/github
+      doc: https://github.com/
+    - name: Linux
+      src: https://cdn.simpleicons.org/linux
+      doc: https://www.linux.org/
+    - name: Docker
+      src: https://cdn.simpleicons.org/docker
+      doc: https://www.docker.com/
+    - name: Figma
+      src: https://cdn.simpleicons.org/figma
+      doc: https://www.figma.com/
+
+- id: ai
+  title: AI & Emerging Tech
+  icon: bi-stars
+  items:
+    - name: LLM & Prompting
+      icon: bi-robot
+      doc: https://openai.com/
+    - name: AI Assistants
+      icon: bi-magic
+      doc: https://code.visualstudio.com/
+    - name: Automation
+      icon: bi-lightning
+      doc: https://www.python.org/

@@ -1,0 +1,11 @@
+{
+  "yaml.schemas": {
+    "./.astro/collections/contact.schema.json": ["src/data/contact.yaml"],
+    "./.astro/collections/educations.schema.json": ["src/data/educations.yaml"],
+    "./.astro/collections/experience.schema.json": ["src/data/experience.yaml"],
+    "./.astro/collections/projects.schema.json": ["src/data/projects.yaml"],
+    "./.astro/collections/site.schema.json": ["src/data/site.yaml"],
+    "./.astro/collections/about.schema.json": ["src/data/about.yaml"],
+    "./.astro/collections/skills.schema.json": ["src/data/skills.yaml"]
+  }
+}

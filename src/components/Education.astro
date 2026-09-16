@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import Reveal from './Reveal.astro';
+
+const entries = (await getCollection('educations'))
+  .map((entry) => entry.data)
+  .sort((a, b) => b.order - a.order);
+---
+
+<section id="education" class="relative py-20 sm:py-28">
+  <div class="mx-auto w-full max-w-4xl px-6 sm:px-10">
+    <SectionHeading title="Education" subtitle="My academic background" />
+
+    <div class="relative">
+      <div class="absolute bottom-4 left-[7px] top-4 w-px bg-gradient-to-b from-cyan-500/60 via-purple-500/40 to-transparent"></div>
+
+      <div class="space-y-10">
+        {entries.map((item, i) => (
+          <Reveal delay={i * 100}>
+            <div class="relative pl-10">
+              <span
+                class="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-purple-400 bg-(--bg) shadow-[0_0_16px_rgba(167,139,250,0.7)]"
+              ></span>
+
+              <div class="glass rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-purple-400/40">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="rounded-full border border-(--line) bg-white/5 px-3 py-1 text-xs font-medium text-purple-300 light:text-purple-600"
+                  >
+                    {item.period}
+                  </span>
+                  {item.placeholder && (
+                    <span
+                      class="rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300 light:text-amber-600"
+                    >
+                      * Data contoh — ganti dengan milikmu
+                    </span>
+                  )}
+                </div>
+
+                <h3 class="mt-3 font-display text-lg font-semibold sm:text-xl">{item.degree}</h3>
+                <p class="mt-0.5 text-sm font-medium text-(--muted)">{item.institution}</p>
+
+                {item.thesis && (
+                  <div class="mt-4 rounded-xl border border-(--line) bg-white/5 p-4">
+                    <div
+                      class="flex items-center gap-2 text-xs font-medium text-purple-300 light:text-purple-600"
+                    >
+                      <i class="bi bi-journal-text"></i>
+                      {item.thesis.kind ?? 'Thesis'}
+                    </div>
+                    <p class="mt-1.5 text-sm font-semibold">{item.thesis.title}</p>
+                    {item.thesis.description && (
+                      <p class="mt-1 text-sm leading-relaxed text-(--muted)">
+                        {item.thesis.description}
+                      </p>
+                    )}
+                    {item.thesis.links && item.thesis.links.length > 0 && (
+                      <div class="mt-3 flex flex-wrap gap-2">
+                        {item.thesis.links.map((link) => (
+                          <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center gap-1.5 rounded-full border border-(--line) bg-white/5 px-3 py-1 text-xs text-cyan-300 transition hover:border-cyan-400/40 hover:text-(--text) light:text-cyan-600"
+                          >
+                            <i class="bi bi-box-arrow-up-right"></i>
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <ul class="mt-4 space-y-2">
+                  {item.highlights.map((h) => (
+                    <li class="flex gap-2 text-sm text-(--muted)">
+                      <i class="bi bi-check2-circle mt-0.5 text-cyan-400"></i>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

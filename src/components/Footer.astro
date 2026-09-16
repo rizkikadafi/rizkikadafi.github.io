@@ -1,0 +1,49 @@
+---
+import { getEntry } from 'astro:content';
+
+const siteEntry = await getEntry('site', 'site');
+const { profile, socials } = siteEntry!.data;
+const year = new Date().getFullYear();
+---
+
+<footer class="relative border-t border-(--line) py-10">
+  <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-6 sm:flex-row sm:justify-between sm:px-10">
+    <a href="/#hero" class="flex items-center gap-2 font-display font-bold">
+      <img src="/assets/image/favicon.png" alt="Logo" width="28" height="28" class="rounded-md" />
+      {profile.name}
+    </a>
+
+    <div class="flex items-center gap-3">
+      {socials.map((s) => (
+        <a
+          href={s.link}
+          target="_blank"
+          rel="noopener"
+          aria-label={s.name}
+          title={s.name}
+          class="grid h-9 w-9 place-items-center rounded-lg text-base text-(--muted) transition hover:text-[#22d3ee]"
+        >
+          <i class={`bi bi-${s.icon}`}></i>
+        </a>
+      ))}
+    </div>
+
+    <button
+      id="back-to-top"
+      class="glass grid h-11 w-11 place-items-center rounded-xl text-lg transition duration-300 hover:-translate-y-1"
+      aria-label="Back to top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </div>
+
+  <p class="mt-8 px-6 text-center text-xs text-(--muted)">
+    <i class="bi bi-c-circle mr-1"></i> {year} {profile.name}. All Rights Reserved.
+  </p>
+</footer>
+
+<script>
+  document.getElementById('back-to-top')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

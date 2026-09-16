@@ -1,0 +1,18 @@
+# ============================================================
+# CONTACT
+# Opsi kontak yang tampil di section Contact.
+# Tambahkan/hapus entri bebas (email, whatsapp, telegram, dll).
+# ============================================================
+
+- id: email
+  label: muh.rizki.kadafi@gmail.com
+  icon: envelope
+  link: mailto:muh.rizki.kadafi@gmail.com
+- id: github
+  label: rizkikadafi
+  icon: github
+  link: https://github.com/rizkikadafi
+- id: linkedin
+  label: rizkikadafi
+  icon: linkedin
+  link: https://www.linkedin.com/in/rizkikadafi

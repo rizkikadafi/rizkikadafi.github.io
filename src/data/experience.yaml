@@ -1,0 +1,36 @@
+# ============================================================
+# EXPERIENCE (pengalaman kerja — timeline)
+# order: SEMAKIN BESAR angkanya, SEMAKIN ATAS tampilnya (terbaru = paling besar).
+# placeholder: true = badge kecil "Data contoh".
+# Riwayat pendidikan terpisah di file educations.yaml.
+# ============================================================
+
+- id: software-engineer-intern-erp
+  role: Software Engineer Intern — Web & ERP
+  company: "PT. Ferbos Kreasi Digital"
+  period: Jul 2025 - Nov 2025
+  order: 4
+  bullets:
+    - "Developed custom Odoo modules to extend ERP functionality for business workflows."
+    - "Designed and implemented the Wakaf Energi system, a solar-PV donation platform for mosques built on Odoo ERP."
+    - "Translated business requirements into digital features including donation management, reporting, and API integrations."
+
+- id: curriculum-staff-organization
+  role: Curriculum Staff
+  company: "Default UNJ"
+  period: Jul 2024 - Apr 2025
+  order: 3
+  bullets:
+    - "Create and design Syllabus for Front-end learning classes."
+    - "Managed and facilitated weekly learning sessions for students."
+    - "Coordinated with fellow staff to ensure learning outcomes were aligned with industry standards."
+
+- id: frontend-dev-flutter
+  role: Front-End Developer — Mobile & Flutter
+  company: "Angkit Agro Technology"
+  period: Sep 2023 - Nov 2023
+  order: 2
+  bullets:
+    - "Created mobile UI for a meat traceability application using Flutter."
+    - "Worked closely with a back-end team to ensure API integration worked seamlessly."
+    - "Participated in sprint planning and feature reviews with cross-functional teams."

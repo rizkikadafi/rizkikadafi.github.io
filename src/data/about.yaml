@@ -1,0 +1,24 @@
+# ============================================================
+# ABOUT SECTION
+# bio: array paragraf tentang diri Anda.
+# highlights: kartu fokus keahlian (edit bebas).
+# ============================================================
+
+about:
+  bio:
+    - "I am a Computer Science graduate who is passionate about software engineering, system design, and building technology that solves real business problems."
+    - "Experienced in developing web and ERP-based applications, translating business requirements into software solutions, and working across frontend, backend, API integration, and database development."
+    - "I am also deeply interested in applying AI — not only to improve software development efficiency and developer productivity, but also to integrate AI into products and build smarter applications."
+  highlights:
+    - title: Software Engineering
+      desc: Designing and building reliable, maintainable, and scalable applications.
+      icon: bi-code-slash
+    - title: System Design
+      desc: Architecting solutions that connect business needs with technical implementation.
+      icon: bi-diagram-3
+    - title: ERP & Business Systems
+      desc: Developing ERP modules that make business processes efficient and integrated.
+      icon: bi-building-gear
+    - title: AI for Smarter Software
+      desc: Applying AI to boost development efficiency and integrate intelligent features into smarter applications.
+      icon: bi-magic

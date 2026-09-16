@@ -1,0 +1,48 @@
+# ============================================================
+# EDUCATION (riwayat pendidikan — timeline)
+# order: SEMAKIN BESAR angkanya, SEMAKIN ATAS tampilnya (terbaru = paling besar).
+# thesis: OPSIONAL — untuk skripsi/tesis/proyek akhir/publikasi.
+#   kind        : label (contoh: Undergraduate Thesis, Final Project, Skripsi) — opsional
+#   title       : judul
+#   description : deskripsi singkat — opsional
+#   links       : ARRAY tautan (boleh 1 atau lebih: GitHub, paper, PDF, repo) — opsional
+#     - label   : nama tautan (GitHub, Paper, PDF, ...)
+#     - url     : alamat tautan
+# placeholder: true = badge kecil "Data contoh".
+#
+# Contoh dengan thesis:
+# - id: computer-science-degree
+#   degree: B.S. in Computer Science
+#   institution: Jakarta State University (Universitas Negeri Jakarta)
+#   period: "— 2024"
+#   order: 1
+#   highlights: [...]
+#   thesis:
+#     kind: Undergraduate Thesis
+#     title: Judul Skripsi
+#     description: Deskripsi singkat.
+#     links:
+#       - label: GitHub
+#         url: https://github.com/user/repo
+#       - label: PDF
+#         url: https://repositori/download
+# ============================================================
+
+- id: computer-science-degree
+  degree: B.S. in Computer Science
+  institution: Jakarta State University (Universitas Negeri Jakarta)
+  period: "Sep 2022 — Aug 2026"
+  order: 1
+  placeholder: false
+  thesis:
+    kind: Undergraduate Thesis
+    title: "Code Knowledge Graph Enrichment With Odoo Framework Semantic For Repository-Level Code Understanding"
+    description: "Enriched Code Knowledge Graph with Odoo semantics to improve AI agent understanding of Odoo codebases, reducing KG exploration tool calls by 9.3%."
+    links:
+      - label: odoo-agent
+        url: https://github.com/rizkikadafi/odoo-agent
+      - label: knowledge-graph
+        url: https://gitlab.com/rizkikadafi/knowledge-graph
+  highlights:
+    - "Focused on software engineering and application development."
+    - "Built strong foundations in data structures, algorithms, and web development."
