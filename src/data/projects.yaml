@@ -5,6 +5,18 @@
 # links: github / deployment / blog (opsional, hapus yang tidak ada).
 # ============================================================
 
+- id: shop-management
+  name: Shop Management
+  desc: Offline-first shop management app for a small retail store, designed around non-tech-savvy users.
+  year: 2026
+  featured: true
+  tech: [React, TypeScript, Refine, Ant Design, Supabase, Dexie]
+  links:
+    github: https://github.com/rizkikadafi/shop-management
+    blog: https://rizkikadafi.github.io/blog/blog/building-shop-management-app-for-my-parents/
+    deployment: https://shop-management-green-delta.vercel.app/
+  img: /assets/image/projects/shop-management.png
+
 - id: personal-blog
   name: Personal Blog
   desc: Blog to share knowledge, personal jurney and opinion
